@@ -1,0 +1,179 @@
+/*
+  Aaron Lott - 2019
+  Personal Site - Typer Edition
+*/
+body,html {
+  font-size: 62.5%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,p {
+  font-size: 3rem;
+  font-weight: normal;
+}
+.desktop {
+  background: -moz-linear-gradient(220deg, rgba(46,18,41,1) 0%, rgba(127,46,53,1) 100%); /* ff3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(127,46,53,1)), color-stop(100%, rgba(46,18,41,1))); /* safari4+,chrome */
+  background: -webkit-linear-gradient(220deg, rgba(46,18,41,1) 0%, rgba(127,46,53,1) 100%); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(220deg, rgba(46,18,41,1) 0%, rgba(127,46,53,1) 100%); /* opera 11.10+ */
+  background: -ms-linear-gradient(220deg, rgba(46,18,41,1) 0%, rgba(127,46,53,1) 100%); /* ie10+ */
+  background: linear-gradient(230deg, rgba(46,18,41,1) 0%, rgba(127,46,53,1) 100%); /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7F2E35', endColorstr='#2E1229',GradientType=1 ); /* ie6-9 */
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 475px;
+}
+.terminal {
+  position: relative;
+  background-color: #300A24;
+  font-family: 'Ubuntu Mono';
+  width: 50%;
+  min-height: 305px;
+  max-width: 750px;
+  padding: 5px;
+  padding-bottom: 6%;
+  border: #3C3B37 2px solid;
+  border-top-width: 28px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.terminal p.center, .terminal h1, .terminal h2 {
+  padding-left: 5px;
+}
+a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 2px white solid;
+  transition: all 1s ease-in;
+}
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+.buttons {
+  position: absolute;
+  top: -44px;
+  font-size: 2rem;
+  color: #dcdcdc;
+}
+.button {
+  height: 15px;
+  width: 15px;
+  background-color: #b1b1b1;
+  position: absolute;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+}
+.button.close {
+  background-color: #fd5210;
+}
+/*.button.close:before, .button.close:after {
+  content: '';
+  width: 10px;
+  height: 1.5px;
+  background-color: #252525;
+  position: absolute;
+  top: 6.5px;
+  left: 2px;
+  transform: rotate(45deg);
+}
+.button.close:after {
+  transform: rotate(-45deg);
+}*/
+.button.minimize {
+  left: 25px;
+}
+/*.button.minimize:before {
+  content: '';
+  width: 9px;
+  height: 1.5px;
+  background-color: #252525;
+  position: absolute;
+  top: 7px;
+  left: 3px;
+}*/
+.button.maximize {
+  left: 48px;
+}
+/*.button.maximize:before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 3.5px;
+  left: 3.5px;
+  border: 1.3px solid black;
+}*/
+.termname {
+  position: absolute;
+  left: 90px;
+  top: 0px;
+}
+.center {
+  color: #FFF;
+  width: 100%;
+  text-align: left;
+  margin: 0;
+}
+@media (max-width: 1000px) and (min-width: 601px) {
+  .terminal {
+    width: 513px;
+    /*min-height: 650px;*/
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  h1,h2,p {
+    font-size: 2.6rem;
+  }
+  span {
+    font-size: 2.4rem;
+  }
+  .termname {
+    top: -3px;
+  }
+}
+@media(max-width: 600px) and (min-width: 450px) {
+   .terminal {
+    width: 377px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  h1,h2,p {
+    font-size: 2.2rem;
+  }
+  span {
+    font-size: 2rem;
+  }
+  .termname {
+    top: 4px;
+  }
+}
+@media(max-width: 449px) {
+   .terminal {
+    width: 261px;
+    min-height: 450px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+ }
+  h1,h2,p {
+    font-size: 1.5rem;
+  }
+  span {
+    font-size: 1.2rem;
+  }
+  .termname {
+    top: 4px;
+  }
+}
