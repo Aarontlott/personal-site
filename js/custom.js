@@ -19,12 +19,12 @@ var Custom = (function() {
 
 	      var time = 2000;
 
-	      var bodyText1 = "$('.body1').typeTo('Name: Aaron Lott');";
-	      var bodyText2 = "$('.body2').typeTo('Occupation: Web Developer / Web Systems Director');";
+	      var bodyText1 = "$('.body1').typeTo('Name: Aaron Rierson-Lott');";
+	      var bodyText2 = "$('.body2').typeTo('Occupation: Front end Engineer / Live Ops');";
 	      var bodyText3 = "$('.body3').typeTo('Skills: Open source full stack');";
 	      var bodyText7 = "$('.body7').typeTo('Find me: GitHub, LinkedIn');";
 	      var bodyText4 = "$('.body4').typeTo('Location: Fife, Scotland');";
-	      var loading = "$('.loading').typeTo('Status Report: Happy to be back in Scotland :)');";
+	      var loading = "$('.loading').typeTo('Status Report: Things are looking up :D');";
 	      var finish = "$('.body5').typeTo(' -- [Report complete] --');";
 	      var loading2 = "$('.loading2').typeTo('--------------------------------');";
 	      var finish2 = "$('.body6').typeTo('Contact me at aarontlott@gmail.com.');";
@@ -42,7 +42,7 @@ var Custom = (function() {
 	      	var txt = $('.body7').text();
 
 	      	var new_txt = txt.replace("GitHub",'<a target="_blank" href="https://github.com/Aarontlott">GitHub</a>');
-	      	new_txt = new_txt.replace("LinkedIn",'<a target="_blank" href="https://www.linkedin.com/in/aaron-lott-594bb776/">LinkedIn</a>');
+	      	new_txt = new_txt.replace("LinkedIn",'<a target="_blank" href="https://www.linkedin.com/in/aaron-rierson-lott-594bb776/">LinkedIn</a>');
 
 	      	$('.body7').html(new_txt);
 
