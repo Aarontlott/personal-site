@@ -26,7 +26,7 @@ var Custom = (function () {
 			var name = "$('.body1').typeTo('Name: Aaron Rierson-Lott');";
 			var occupation = "$('.body2').typeTo('Occupation: Senior front end engineer, Outplay Entertainment');";
 			var skills = "$('.body3').typeTo('Skills: Turning complex problems into simple, useful systems');";
-			var findMyWork = "$('.body4').typeTo('Find my work: GitHub, Itch.io, LinkedIn');";
+			var findMyWork = "$('.body4').typeTo('Find my work: GitHub, Itch.io, Novels');";
 			var location = "$('.body5').typeTo('Location: Fife, Scotland');";
 			var status = "$('.loading').typeTo('Status Report: Life feels good :)');";
 			var reportComplete = "$('.body6').typeTo(' -- [Report complete] --');";
@@ -47,10 +47,15 @@ var Custom = (function () {
 				var txt = $('.body4').text();
 
 				var new_txt = txt.replace("GitHub", '<a target="_blank" href="https://github.com/Aarontlott">GitHub</a>');
-				new_txt = new_txt.replace("LinkedIn", '<a target="_blank" href="https://www.linkedin.com/in/aaron-rierson-lott-594bb776/">LinkedIn</a>');
+				new_txt = new_txt.replace("novels", '<a target="_blank" href="https://mybook.to/TheMachinaSeries">novels</a>');
 				new_txt = new_txt.replace("Itch.io", '<a target="_blank" href="https://haldron.itch.io/">Itch.io</a>');
 
 				$('.body4').html(new_txt);
+
+				// Add LinkedIn link to contact section
+				var contactTxt = $('.body7').text();
+				var newContactTxt = contactTxt.replace("LinkedIn", '<a target="_blank" href="https://www.linkedin.com/in/aaron-rierson-lott-594bb776/">LinkedIn</a>');
+				$('.body7').html(newContactTxt);
 
 			}, 4500);
 			// Why would I do the effect like this? xD
