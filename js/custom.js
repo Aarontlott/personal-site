@@ -1,63 +1,64 @@
-var Custom = (function() {
+/* 
+
+Author: Aaron Rierson-Lott
+Date: 2025-09-21
+Description: Slick typing content for the personal site
+
+License: You're welcome to use this code, but I'm not sure why I'm still using it. Nostalgia, I guess.
+
+*/
+
+var Custom = (function () {
 
 	function init() {
-
 		initTyper();
-		// sizeBackground();
 	}
-
 
 
 	function initTyper() {
-
 		$(function () {
-	      $.typer.options.typeSpeed = 130;
-	      $('.whoami').typeTo("whoami");
-	      setTimeout("$.typer.options.typeSpeed = 10;", 1990);
-	      // setTimeout("$.typer.options.typeSpeed = 100;", 3500);
-	      // setTimeout("$.typer.options.typeSpeed = 10;", 13000);
+			$.typer.options.typeSpeed = 130;
+			$('.whoami').typeTo("whoami");
+			setTimeout("$.typer.options.typeSpeed = 10;", 1990);
 
-	      var time = 2000;
+			var time = 2000;
 
-	      var bodyText1 = "$('.body1').typeTo('Name: Aaron Rierson-Lott');";
-	      var bodyText2 = "$('.body2').typeTo('Occupation: Front end Engineer / Live Ops');";
-	      var bodyText3 = "$('.body3').typeTo('Skills: Open source full stack');";
-	      var bodyText7 = "$('.body7').typeTo('Find me: GitHub, LinkedIn');";
-	      var bodyText4 = "$('.body4').typeTo('Location: Fife, Scotland');";
-	      var loading = "$('.loading').typeTo('Status Report: Things are looking up :D');";
-	      var finish = "$('.body5').typeTo(' -- [Report complete] --');";
-	      var loading2 = "$('.loading2').typeTo('--------------------------------');";
-	      var finish2 = "$('.body6').typeTo('Contact me at aarontlott@gmail.com.');";
+			var name = "$('.body1').typeTo('Name: Aaron Rierson-Lott');";
+			var occupation = "$('.body2').typeTo('Occupation: Senior front end engineer, Outplay Entertainment');";
+			var skills = "$('.body3').typeTo('Skills: Turning complex problems into simple, useful systems');";
+			var findMyWork = "$('.body4').typeTo('Find my work: GitHub, Itch.io, LinkedIn');";
+			var location = "$('.body5').typeTo('Location: Fife, Scotland');";
+			var status = "$('.loading').typeTo('Status Report: Life feels good :)');";
+			var reportComplete = "$('.body6').typeTo(' -- [Report complete] --');";
+			var loadingBar = "$('.loading2').typeTo('--------------------------------');";
+			var contactMe = "$('.body7').typeTo('You can contact me at aarontlott@gmail.com or find me on LinkedIn');";
 
-	      setTimeout(bodyText1, time);
-	      setTimeout(bodyText2, time + 400);
-	      setTimeout(bodyText3, time + 600);
-	      setTimeout(bodyText7, time + 800);
-	      setTimeout(bodyText4, time + 1000);
-	      setTimeout(loading, time + 1100);
-	      setTimeout(finish, time + 1300);
-	      setTimeout(loading2, time + 1500);
-	      setTimeout(finish2, time + 1700);
-	      setTimeout(function(){
-	      	var txt = $('.body7').text();
+			// Screams in modern web development...
+			setTimeout(name, time);
+			setTimeout(occupation, time + 400);
+			setTimeout(skills, time + 600);
+			setTimeout(findMyWork, time + 800);
+			setTimeout(location, time + 1000);
+			setTimeout(status, time + 1100);
+			setTimeout(reportComplete, time + 1300);
+			setTimeout(loadingBar, time + 1500);
+			setTimeout(contactMe, time + 1700);
+			setTimeout(function () {
+				var txt = $('.body4').text();
 
-	      	var new_txt = txt.replace("GitHub",'<a target="_blank" href="https://github.com/Aarontlott">GitHub</a>');
-	      	new_txt = new_txt.replace("LinkedIn",'<a target="_blank" href="https://www.linkedin.com/in/aaron-rierson-lott-594bb776/">LinkedIn</a>');
+				var new_txt = txt.replace("GitHub", '<a target="_blank" href="https://github.com/Aarontlott">GitHub</a>');
+				new_txt = new_txt.replace("LinkedIn", '<a target="_blank" href="https://www.linkedin.com/in/aaron-rierson-lott-594bb776/">LinkedIn</a>');
+				new_txt = new_txt.replace("Itch.io", '<a target="_blank" href="https://haldron.itch.io/">Itch.io</a>');
 
-	      	$('.body7').html(new_txt);
+				$('.body4').html(new_txt);
 
-	      }, 4500);
-
-	    });
-
+			}, 4500);
+			// Why would I do the effect like this? xD
+		});
 	}
-	// function sizeBackground() {
-	// 	var height = $('.terminal').height();
-	// 	$('.terminal').css('min-height',height+50);
-	// }
 
 	return {
-		init:init
+		init: init
 	};
 
 })();
