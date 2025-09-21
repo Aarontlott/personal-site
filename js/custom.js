@@ -57,7 +57,7 @@ var Custom = (function () {
 				var contactTxt = $('.body7').text();
 				var newContactTxt = contactTxt.replace("LinkedIn", '<a target="_blank" href="https://www.linkedin.com/in/aaron-rierson-lott-594bb776/">LinkedIn</a>');
 				$('.body7').html(newContactTxt);
-			}, 5500);
+			}, 6500);
 			// Why would I do the effect like this? xD
 		});
 	}
