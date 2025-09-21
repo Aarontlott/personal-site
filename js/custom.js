@@ -52,12 +52,12 @@ var Custom = (function () {
 
 				$('.body4').html(new_txt);
 
-				// Add LinkedIn link to contact section
+			}, 4500);
+			setTimeout(function () {
 				var contactTxt = $('.body7').text();
 				var newContactTxt = contactTxt.replace("LinkedIn", '<a target="_blank" href="https://www.linkedin.com/in/aaron-rierson-lott-594bb776/">LinkedIn</a>');
 				$('.body7').html(newContactTxt);
-
-			}, 4500);
+			}, 5500);
 			// Why would I do the effect like this? xD
 		});
 	}
