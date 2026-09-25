@@ -61,6 +61,9 @@ a:hover {
   text-decoration: none;
   color: white;
 }
+.no-js a {
+  transition: unset;
+}
 .buttons {
   position: absolute;
   top: -44px;
