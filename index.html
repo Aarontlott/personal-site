@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 
 <head>
   <meta charset="utf-8">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Aaron Rierson-Lott - Personal Site, portfolio, just fun">
+  <meta name="description" content="Aaron Rierson-Lott - Personal Site. Portfolio-ish-thingy? Thanks for visiting.">
   <meta name="author" content="Aaron Rierson-Lott, 2025">
   <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
@@ -22,7 +23,54 @@
 
 <body>
 
-  <div class="desktop">
+  <main class="accessible-fallback" id="about">
+    <h1>Aaron Rierson-Lott</h1>
+    <p>Occupation: Senior front end engineer, Outplay Entertainment</p>
+    <p>Skills: Turning complex problems into simple, useful systems</p>
+    <p>Find my work:
+      <a target="_blank" rel="noopener noreferrer" href="https://github.com/Aarontlott">GitHub</a>,
+      <a target="_blank" rel="noopener noreferrer" href="https://haldron.itch.io/">Itch.io</a>,
+      <a target="_blank" rel="noopener noreferrer" href="https://mybook.to/TheMachinaSeries">novels</a>
+    </p>
+    <p>Location: Fife, Scotland</p>
+    <p>Status: Making creative stuff again.</p>
+    <p>You can contact me at <a href="mailto:aarontlott@gmail.com">aarontlott@gmail.com</a> or find me on
+      <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/aaron-rierson-lott-594bb776/">LinkedIn</a>
+    </p>
+  </main>
+
+  <noscript>
+    <div class="desktop">
+      <div class="terminal">
+        <p class="buttons">
+          <span class="close button"></span>
+          <span class="minimize button"></span>
+          <span class="maximize button"></span>
+          <span class="termname">admin@aaronlott.com:&nbsp;~</span>
+        </p>
+        <p class="center">admin@aaronlott.com: ~$ <span>whoami</span></p>
+        <h1 class="center">Name: Aaron Rierson-Lott</h1>
+        <h2 class="center">Occupation: Senior front end engineer, Outplay Entertainment</h2>
+        <h2 class="center">Skills: Turning complex problems into simple, useful systems</h2>
+        <h2 class="center">Find my work:
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/Aarontlott">GitHub</a>,
+          <a target="_blank" rel="noopener noreferrer" href="https://haldron.itch.io/">Itch.io</a>,
+          <a target="_blank" rel="noopener noreferrer" href="https://mybook.to/TheMachinaSeries">novels</a>
+        </h2>
+        <h2 class="center">Location: Fife, Scotland</h2>
+        <h2 class="center">Status Report: Making creative stuff again :D</h2>
+        <br>
+        <h2 class="center"> -- [Report complete] --</h2>
+        <br>
+        <h2 class="center">--------------------------------</h2>
+        <h2 class="center">You can contact me at <a href="mailto:aarontlott@gmail.com">aarontlott@gmail.com</a> or find me on
+          <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/aaron-rierson-lott-594bb776/">LinkedIn</a>
+        </h2>
+      </div>
+    </div>
+  </noscript>
+
+  <div class="desktop terminal-demo" aria-hidden="true">
     <div class="terminal">
       <p class="buttons">
         <span class="close button"></span>
@@ -30,7 +78,7 @@
         <span class="maximize button"></span>
         <span class="termname">admin@aaronlott.com:&nbsp;~</span>
       </p>
-      <p class="center">admin@aaronlott.com: ~$ <span class="whoami"></span><br><span class="header"></span></[h2]>
+      <p class="center">admin@aaronlott.com: ~$ <span class="whoami"></span><br><span class="header"></span></p>
 
       <h1 class="body1 center"></h1>
       <h2 class="body2 center"></h2>

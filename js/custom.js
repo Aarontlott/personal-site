@@ -10,7 +10,10 @@ License: You're welcome to use this code, but I'm not sure why I'm still using i
 
 var Custom = (function () {
 
+	var terminalSelectors = '.whoami, .body1, .body2, .body3, .body4, .body5, .loading, .body6, .loading2, .body7';
 	function init() {
+		$('.terminal-demo').attr('aria-hidden', 'true');
+		$(terminalSelectors).empty();
 		initTyper();
 	}
 
