@@ -1,50 +1,79 @@
-# React + TypeScript + Vite
+# Personal Site. Portfolio.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Color palette: https://coolors.co/ffbe0b-222e50-007991-f2f4f3-6f1d1b
 
-Currently, two official plugins are available:
+Font: Arvo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Projects to hightlight
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+(Proc gen toy) Victorian Nautical Archive
+https://haldron.itch.io/victorian-nautical-archive
 
-- Configure the top-level `parserOptions` property like this:
+(Literary guessing game) Inkling
+https://github.com/Aarontlott/Inkling
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+(Proc gen toy) Telepathy 
+https://haldron.itch.io/telepathy
+
+(Creative) Custom Gwent-inspired Cards
+TODO: Find the old website files, extract the post and pictures for a case-study
+https://youtu.be/SZihU6g7ZHM
+
+(Novels & Audiobook) The Machina, and The Machina: Arcology
+https://mybook.to/TheMachinaSeries
+https://www.audible.co.uk/pd/The-Machina-Audiobook/B08QDNMXQZ
+
+## Things to link to
+
+https://www.linkedin.com/in/aaron-rierson-lott-594bb776/
+
+## Work Case studies
+
+Digital Pattern Library, University of St Andrews
+https://www.st-andrews.ac.uk/dpl/1.26.0/index.html
+
+
+## Unfinished and unpublished work that's still cool
+
+Gamebook Compiler
+Tool for unfolding an Interactive Fiction story into an epub
+
+Cargo Handler game
+Unfinished wee game in Love2D about moving cargo around, local coop
+
+
+---
+
+## Working on the site
+
+Astro 6, static output, zero client-side JavaScript. Needs Node 22.12+.
+
+```sh
+npm install
+npm run dev      # http://localhost:4321
+npm run build    # outputs to dist/
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Where things live
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+| To change…                                   | Edit                                      |
+| -------------------------------------------- | ----------------------------------------- |
+| Intro, stats, skills, experience, links      | `src/data/site.ts`                        |
+| A project (or add a new one)                 | `src/content/projects/<slug>.md`          |
+| Colours, fonts, spacing                      | `src/styles/global.css` (`:root` tokens)  |
+| Page layout / sections                       | `src/pages/*.astro`                       |
+| The whoami terminal                          | `whoami` in `src/data/site.ts`            |
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Adding a project
+
+Copy any file in `src/content/projects/`, rename it (the filename becomes `/work/<filename>/`), and edit the frontmatter:
+
+- `category`: `work` | `game` | `tool` | `generator` | `writing` | `creative`
+- `status`: `shipped` | `prototype` | `in-progress` | `unfinished` (the last two go in "On the workbench")
+- `featured: true` puts it on the home page
+- `order`: lower numbers come first
+- `draft: true` hides it
+
+Search the project for `TODO` to find every placeholder.

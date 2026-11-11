@@ -1,0 +1,124 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ContactBand from '../../components/ContactBand.astro';
+import { getProjects, type Project } from '../../lib/projects';
+import { categoryLabels, statusLabels } from '../../data/site';
+
+export async function getStaticPaths() {
+  const projects = await getProjects();
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+}
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+const { title, summary, category, status, year, role, stack, links } = project.data;
+const { Content } = await render(project);
+
+const facts = [
+  { label: 'Type', value: categoryLabels[category] },
+  { label: 'Role', value: role },
+  { label: 'Year', value: year },
+  { label: 'Status', value: statusLabels[status] },
+].filter((f) => f.value);
+---
+
+<Base title={title} description={summary}>
+  <article>
+    <header class="section project-header">
+      <div class="container">
+        <a class="back" href="/work/">← All work</a>
+        <p class="eyebrow">{categoryLabels[category]}</p>
+        <h1>{title}</h1>
+        <p class="lede">{summary}</p>
+
+        <dl class="facts">
+          {
+            facts.map((f) => (
+              <div>
+                <dt>{f.label}</dt>
+                <dd>{f.value}</dd>
+              </div>
+            ))
+          }
+          {
+            stack.length > 0 && (
+              <div class="facts__stack">
+                <dt>Built with</dt>
+                <dd>
+                  <ul role="list" class="tags">
+                    {stack.map((t) => (
+                      <li class="tag">{t}</li>
+                    ))}
+                  </ul>
+                </dd>
+              </div>
+            )
+          }
+        </dl>
+
+        {
+          links.length > 0 && (
+            <div class="actions">
+              {links.map((link, i) => (
+                <a class:list={['button', { 'button--primary': i === 0 }]} href={link.url} rel="noopener">
+                  {link.label} ↗
+                </a>
+              ))}
+            </div>
+          )
+        }
+      </div>
+    </header>
+
+    <div class="section">
+      <div class="container prose">
+        <Content />
+      </div>
+    </div>
+  </article>
+
+  <ContactBand />
+</Base>
+
+<style>
+  .back {
+    display: inline-block;
+    margin-bottom: var(--space-m);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .project-header .lede {
+    margin-bottom: var(--space-l);
+  }
+  .facts {
+    display: grid;
+    gap: var(--space-s) var(--space-l);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), max-content));
+    margin: 0 0 var(--space-l);
+    padding: var(--space-m) 0;
+    border-block: 1px solid var(--rule);
+  }
+  .facts dt {
+    font-size: var(--step--1);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--teal);
+  }
+  .facts dd {
+    margin: 0;
+  }
+  .facts__stack {
+    grid-column: 1 / -1;
+  }
+  .facts__stack .tags {
+    margin-top: 0.3rem;
+  }
+</style>

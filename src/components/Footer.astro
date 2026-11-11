@@ -1,0 +1,57 @@
+---
+import { site } from '../data/site';
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p>
+      © {year} {site.name} · {site.location}
+    </p>
+    <ul role="list" class="site-footer__links">
+      {
+        site.links.map((link) => (
+          <li>
+            <a href={link.url} rel="me noopener">
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="site-footer__note">
+      Built with Astro and zero client-side JavaScript. jQuery, you served me well.
+    </p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--navy);
+    color: var(--paper);
+    padding-block: var(--space-l);
+    font-size: var(--step--1);
+  }
+  .site-footer__inner {
+    display: grid;
+    gap: var(--space-s);
+  }
+  .site-footer p {
+    margin: 0;
+  }
+  .site-footer__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-m);
+  }
+  .site-footer a {
+    color: var(--accent);
+  }
+  .site-footer a:hover {
+    color: #fff;
+  }
+  .site-footer__note {
+    opacity: 0.7;
+    font-style: italic;
+  }
+</style>

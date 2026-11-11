@@ -1,0 +1,111 @@
+---
+import Base from '../layouts/Base.astro';
+import Experience from '../components/Experience.astro';
+import ContactBand from '../components/ContactBand.astro';
+import { site } from '../data/site';
+---
+
+<Base title="About" description="About Aaron Rierson-Lott: experience, how I work, and what I do outside the day job.">
+  <section class="section">
+    <div class="container about">
+      <div>
+        <p class="eyebrow">About</p>
+        <h1>Hi, I’m Aaron.</h1>
+      </div>
+      <div class="prose">
+        {/* TODO: this is your bio. Write it like you'd introduce yourself at a meetup. */}
+        <p class="lede">
+          I’m a {site.role.toLowerCase()} based in {site.location}. My favourite kind of work is taking something
+          complicated and making it feel obvious.
+        </p>
+        <p>
+          TODO: a paragraph about your career so far: where you started, what you've specialised in, and what
+          you're known for on a team.
+        </p>
+        <p>
+          Outside work I make things for the fun of it: procedural generators for PROCJAM, small games,
+          tools for writers, and The Machina, a series of novels that also became an audiobook.
+        </p>
+        {site.cv && <p><a class="button button--primary" href={site.cv}>Download my CV</a></p>}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="how-heading">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="how-heading">How I work</h2>
+      </div>
+      <div class="grid">
+        {
+          site.principles.map((p, i) => (
+            <article class="card principle">
+              <span class="principle__num" aria-hidden="true">
+                0{i + 1}
+              </span>
+              <h3>{p.title}</h3>
+              <p>{p.body}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="experience-heading">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="experience-heading">Experience</h2>
+      </div>
+      <Experience />
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="skills-heading">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="skills-heading">Toolbox</h2>
+      </div>
+      <div class="grid grid--2">
+        {
+          site.strengths.map((s) => (
+            <div>
+              <h3>{s.title}</h3>
+              <ul role="list" class="tags">
+                {s.tags.map((t) => (
+                  <li class="tag">{t}</li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <ContactBand />
+</Base>
+
+<style>
+  .about {
+    display: grid;
+    gap: var(--space-m) var(--space-xl);
+  }
+  @media (min-width: 56rem) {
+    .about {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+  .principle__num {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--step-2);
+    color: var(--accent-strong);
+    margin-bottom: var(--space-xs);
+  }
+  .principle p {
+    margin: 0;
+    color: var(--text-muted);
+  }
+</style>
