@@ -24,7 +24,7 @@ export const site = {
     highlight: 'simple, useful',
     headlineEnd: 'systems.',
     intro:
-      "I build accessible websites and tools that make other people's work easier. Outside the day job I love make procedural generators, small games, and the occasional novel.",
+      "I build accessible websites and tools that make other people's work easier. Outside the day job I love make procedural generators, small games, and the occasional written story.",
   },
 
   /** The little terminal on the home page — a nod to the old site. */
@@ -39,8 +39,9 @@ export const site = {
   /** "At a glance" numbers. Keep them short and true. */
   stats: [
     { value: '12+', label: 'years building for the web' },
-    { value: '2', label: 'published novels (plus an audiobook)' },
-    { value: '2', label: 'PROCJAM generators shipped' }, //TODO I don't love this, maybe need more examples -A
+    { value: '5', label: 'Game Jams, I ❤️ PROCJAM' },
+    { value: '2', label: 'published novels (+ audiobook)' },
+    { value: '1', label: 'Pear tree, partrige n/a'}
   ],
 
   /** "What I bring" cards. */

@@ -48,7 +48,7 @@ Choosing an image for each person was the toughest job. Knowing the lore behind 
 
 The whole project started with one image. While idly thinking about the idea, I found a piece of art that looked *uncannily* like my colleague Ben. When I showed him his card, he was a little taken aback. This was very much out of left field.
 
-<!-- ![Art of a bald man talking his way out of trouble with some guards. Ben in real life is well spoken and looks eerily like this.](/images/gwent/ben-art.png) -->
+![Art of a bald man talking his way out of trouble with some guards. Ben in real life is well spoken and looks eerily like this.](/images/gwent/ben-art.jpg)
 
 The rest came together over a few weeks of early mornings before work.
 
@@ -56,12 +56,12 @@ The rest came together over a few weeks of early mornings before work.
 
 The cards turned out wonderfully. Out of respect for my coworkers I’m not showing their names, but you can see my own card.
 
-<!-- ![Top-down view of the cards: the deck on the left and Aaron's card face up on the right.](/images/gwent/aaron-by-stack.jpg) -->
-<!-- ![Close-up of the cards showing their slight texture.](/images/gwent/aaron-close-up.jpg) -->
-<!-- ![Six of the cards with the names hidden. A few printed a little darker than intended.](/images/gwent/several-cards.jpg) -->
-<!-- ![The two card backs, the University of St Andrews logo and the MOD logo, both on black.](/images/gwent/both-backs.jpg) -->
-<!-- ![Both decks from a high angle, showing off the gold gilt edging.](/images/gwent/both-high-angle.jpg) -->
-<!-- ![Close-up of the gold gilt edge. A little messy, with flecks of gold in the black, but it looks amazing.](/images/gwent/gilt-edge.jpg) -->
+![Top-down view of the cards: the deck on the left and Aaron's card face up on the right.](/images/gwent/aaron-by-stack.jpg)
+![Close-up of the cards showing their slight texture.](/images/gwent/aaron-close-up.jpg)
+![Six of the cards with the names hidden. A few printed a little darker than intended.](/images/gwent/several-cards.jpg)
+![The two card backs, the University of St Andrews logo and the MOD logo, both on black.](/images/gwent/both-backs.jpg)
+![Both decks from a high angle, showing off the gold gilt edging.](/images/gwent/both-high-angle.jpg)
+![Close-up of the gold gilt edge. A little messy, with flecks of gold in the black, but it looks amazing.](/images/gwent/gilt-edge.jpg)
 
 ## How it landed
 
