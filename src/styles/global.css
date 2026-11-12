@@ -400,3 +400,39 @@ ol[role='list'] {
   border-radius: var(--radius);
   margin-block: var(--space-m);
 }
+.prose figure {
+  margin: var(--space-l) 0;
+}
+.prose figure img {
+  margin: 0;
+  width: 100%;
+  border: 1px solid var(--rule);
+  box-shadow: var(--shadow);
+}
+.prose figcaption {
+  margin-top: var(--space-xs);
+  font-size: var(--step--1);
+  color: var(--text-muted);
+}
+.prose .figure--narrow {
+  max-width: 24rem;
+}
+.prose .figure--output {
+  margin-top: 0;
+}
+.prose .figure--output img {
+  border: 2px solid var(--navy);
+  box-shadow: 8px 8px 0 var(--accent);
+}
+.prose .figure__label {
+  display: inline-block;
+  margin: 0 0 var(--space-xs);
+  padding: 0.2em 0.6em;
+  border-radius: 4px;
+  background: var(--accent);
+  color: var(--navy);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}

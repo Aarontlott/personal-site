@@ -12,6 +12,11 @@ import { site } from '../data/site';
             {job.role} <span class="timeline__org">· {job.org}</span>
           </h3>
           <p class="muted">{job.summary}</p>
+          {job.link && (
+            <p class="timeline__link">
+              <a href={job.link}>Read the case study →</a>
+            </p>
+          )}
         </div>
       </li>
     ))
@@ -57,6 +62,11 @@ import { site } from '../data/site';
   }
   .timeline p {
     margin-bottom: 0;
+  }
+  .timeline__link {
+    margin-top: 0.35rem;
+    font-weight: 700;
+    font-size: var(--step--1);
   }
   @media (max-width: 40rem) {
     .timeline__item {

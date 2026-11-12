@@ -9,7 +9,7 @@ stack: [Print design, Image selection, 300 dpi print prep]
 links:
   - label: Watch the video
     url: https://youtu.be/SZihU6g7ZHM
-order: 6
+order: 9
 ---
 
 <!--

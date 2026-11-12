@@ -9,7 +9,7 @@ stack: [HTML5, JavaScript, Procedural generation, Tracery-style grammars]
 links:
   - label: Play on Itch.io
     url: https://haldron.itch.io/telepathy
-order: 4
+order: 7
 ---
 
 Made for **PROCJAM 2025**.

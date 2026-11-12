@@ -11,8 +11,7 @@ links:
     url: https://mybook.to/TheMachinaSeries
   - label: Audiobook on Audible
     url: https://www.audible.co.uk/pd/The-Machina-Audiobook/B08QDNMXQZ
-featured: true
-order: 5
+order: 8
 ---
 
 ## The books

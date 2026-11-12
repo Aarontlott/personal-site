@@ -13,19 +13,27 @@ import { site } from '../data/site';
         <h1>Hi, I’m Aaron.</h1>
       </div>
       <div class="prose">
-        {/* TODO: this is your bio. Write it like you'd introduce yourself at a meetup. */}
         <p class="lede">
-          I’m a {site.role.toLowerCase()} based in {site.location}. My favourite kind of work is taking something
-          complicated and making it feel obvious.
+          I’m a {site.role.toLowerCase()} in {site.location} with 12 years’ experience, and I work where design
+          and engineering meet.
         </p>
         <p>
-          TODO: a paragraph about your career so far: where you started, what you've specialised in, and what
-          you're known for on a team.
+          My favourite part of the job is sitting with the people who use my tools and fixing where they actually
+          get stuck. At Outplay Entertainment I’m the sole front-end engineer on the LiveOps platform, the tool
+          every producer, designer and QA tester uses to run the studio’s live games. I rebuilt it from Ember.js to
+          React-admin without ever switching it off, and shaped it around six groups of people who all want
+          slightly different things from it.
         </p>
         <p>
-          Outside work I make things for the fun of it: procedural generators for PROCJAM, small games,
-          tools for writers, and The Machina, a series of novels that also became an audiobook.
+          Before that I led a web department at MOD Worldwide, delivering accessible work for Fortune 50 healthcare and
+          telecom clients, and was lead developer on the University of St Andrews’ Digital Pattern Library. I treat
+          WCAG AA as part of good design rather than a checklist, and I like to ship small and often.
         </p>
+        <p>
+          Outside work I make things for the fun of it: procedural generators for PROCJAM, game-jam games, a homelab
+          finance app, and The Machina, a series of novels that also became an audiobook.
+        </p>
+        <p>I enjoy creating things for people and, hopefully, making the world a brighter place.</p>
         {site.cv && <p><a class="button button--primary" href={site.cv}>Download my CV</a></p>}
       </div>
     </div>
@@ -58,6 +66,7 @@ import { site } from '../data/site';
         <h2 id="experience-heading">Experience</h2>
       </div>
       <Experience />
+      <p class="education"><strong>Education:</strong> {site.education}</p>
     </div>
   </section>
 
@@ -103,6 +112,9 @@ import { site } from '../data/site';
     font-size: var(--step-2);
     color: var(--accent-strong);
     margin-bottom: var(--space-xs);
+  }
+  .education {
+    margin-top: var(--space-l);
   }
   .principle p {
     margin: 0;
