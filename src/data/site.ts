@@ -24,7 +24,7 @@ export const site = {
     highlight: 'simple, useful',
     headlineEnd: 'systems.',
     intro:
-      "I design and build accessible websites and tools that make other people's work easier, and I do it by sitting with the people who use them. Outside the day job I love making procedural generators, small games, and the occasional written story.",
+      "I design and build accessible websites and tools that make other people's work easier, and I do it by working alongside the people who use them. Outside of the day job, I love making procedural generators, small games, and the occasional written story.",
   },
 
   /** The little terminal on the home page — a nod to the old site. */
@@ -48,27 +48,27 @@ export const site = {
   /** "What I bring" cards. Numbers here come from notes/positioning.md. */
   strengths: [
     {
-      title: 'Design through to code',
+      title: 'Person-centred coding',
       body:
-        'Talk to the people who use it, prototype (Figma or an LLM), settle the information hierarchy, then ship and iterate. After watching a colleague paste 500 localisation fields by hand, I built an importer that turned 80 minutes into 10 seconds.',
+        'The first step is talking to the people who use the product to understand where they get stuck, what they hate to do, and what they need. Then, I prototype (Figma or an LLM), settle the information hierarchy, and ship and iterate.',
       tags: ['User research', 'Figma', 'Prototyping', 'Information hierarchy', 'React', 'TypeScript'],
     },
     {
-      title: 'Design systems & accessibility',
+      title: 'Design & accessibility',
       body:
-        'Lead developer on the University of St Andrews’ Digital Pattern Library, and WCAG AA delivery for Fortune 50 healthcare and telecom clients, tested with screen-reader users. Accessibility is part of good design, not a checklist.',
+        'Accessibility is part of good design, not a checklist. I use the usual accessibility tooling, but I\'ve tested with screen-reader users to deliver truly accessible WCAG AA sites and applications.',
       tags: ['Design systems', 'WCAG 2.1 AA', 'Screen-reader testing', 'React-admin', 'MUI', 'CSS / SASS'],
     },
     {
       title: 'Shipping small and often',
       body:
-        'Smaller merge requests, good CI, and AI-assisted engineering (Cursor, now Claude Code) on a large legacy codebase. At Outplay the team’s p90 time to merge halved, from 1.86 to 0.9 days.',
+        'Smaller merge requests, good Continuous Integration (CI/CD), and AI-assisted engineering. At Outplay, the team’s p90 time to merge halved, from 1.86 to 0.9 days.',
       tags: ['Claude Code', 'Cursor', 'GitLab / GitHub CI/CD', 'Playwright', 'Vite', 'Node.js'],
     },
     {
       title: 'Making things from scratch',
       body:
-        'I like turning a vague idea into something people can play with: procedural text, game-jam games, tools for writers, two novels. Shipping side projects keeps the craft sharp.',
+        'I enjoy turning a vague idea into something people can play with: procedural text, game-jams, two novels.',
       tags: ['Procedural generation', 'Game jams', 'WebSockets', 'Unity', 'Writing'],
     },
   ],
@@ -151,10 +151,10 @@ export const nav = [
 
 /** Friendly labels for project categories and statuses. */
 export const categoryLabels = {
-  work: 'Case study',
+  work: 'Work project',
   game: 'Game',
   tool: 'Tool',
-  generator: 'Generator',
+  generator: 'Game',
   writing: 'Writing',
   creative: 'Creative',
 } as const;
