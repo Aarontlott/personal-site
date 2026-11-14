@@ -19,7 +19,6 @@ export const site = {
 
   /** Home page hero. */
   hero: {
-    eyebrow: 'Senior front-end engineer · Where design meets code',
     headlineStart: 'I turn complex problems into',
     highlight: 'simple, useful',
     headlineEnd: 'systems.',

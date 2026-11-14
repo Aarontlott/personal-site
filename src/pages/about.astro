@@ -9,8 +9,7 @@ import { site } from '../data/site';
   <section class="section">
     <div class="container about">
       <div>
-        <p class="eyebrow">About</p>
-        <h1>Hi, I’m Aaron.</h1>
+        <h1>Hi there, <br/> I’m Aaron.</h1>
       </div>
       <div class="prose">
         <p class="lede">
@@ -30,32 +29,11 @@ import { site } from '../data/site';
           WCAG AA as part of good design rather than a checklist, and I like to ship small and often.
         </p>
         <p>
-          Outside work I make things for the fun of it: procedural generators for PROCJAM, game-jam games, a homelab
-          finance app, and The Machina, a series of novels that also became an audiobook.
+          Outside work I make things for the fun of it: game-jams but with a soft spot for the PROCJAM, a homelab
+          finance app (less fun, but the wife loves it), and The Machina, a series of novels that also became an audiobook.
         </p>
         <p>I enjoy creating things for people and, hopefully, making the world a brighter place.</p>
         {site.cv && <p><a class="button button--primary" href={site.cv}>Download my CV</a></p>}
-      </div>
-    </div>
-  </section>
-
-  <section class="section" aria-labelledby="how-heading">
-    <div class="container">
-      <div class="section-head">
-        <h2 id="how-heading">How I work</h2>
-      </div>
-      <div class="grid">
-        {
-          site.principles.map((p, i) => (
-            <article class="card principle">
-              <span class="principle__num" aria-hidden="true">
-                0{i + 1}
-              </span>
-              <h3>{p.title}</h3>
-              <p>{p.body}</p>
-            </article>
-          ))
-        }
       </div>
     </div>
   </section>

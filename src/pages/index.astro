@@ -18,7 +18,6 @@ const { hero } = site;
   <section class="hero">
     <div class="container hero__inner">
       <div class="hero__text">
-        <p class="eyebrow">{hero.eyebrow}</p>
         <h1>
           {hero.headlineStart} {hero.highlight} {hero.headlineEnd}
         </h1>
@@ -134,7 +133,13 @@ const { hero } = site;
   }
   @media (min-width: 60rem) {
     .hero__inner {
-      grid-template-columns: 1.25fr 1fr;
+      grid-template-columns: 1fr 1.1fr;
+    }
+    /* Let the terminal spill past the right edge of the content area,
+       into the page margin: up to 10rem, always leaving 2rem of breathing room. */
+    .hero__terminal {
+      --bleed: min(10rem, max(0px, (100vw - var(--container)) / 2 - 2rem));
+      margin-right: calc(-1 * var(--bleed));
     }
   }
   .hero h1 {

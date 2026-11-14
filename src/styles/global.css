@@ -200,15 +200,6 @@ ol[role='list'] {
 .section-head h2 { margin: 0; }
 .section-head p { margin: 0; color: var(--text-muted); max-width: 40ch; }
 
-.eyebrow {
-  font-size: var(--step--1);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--teal);
-  margin-bottom: var(--space-xs);
-}
-
 .lede {
   font-size: var(--step-1);
   max-width: 60ch;

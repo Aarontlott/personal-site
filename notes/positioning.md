@@ -73,6 +73,6 @@ The metrics were measured by an in-house service that links GitLab merge request
 - [x] Inkling's live URL: https://daily-inkling.netlify.app/
 - [x] Itch.io link for Don't Forget Your Lines: https://j01000001c.itch.io/dont-forget-your-lines
 - [x] Add a CV PDF to `/public` and set `cv` in `src/data/site.ts`? (A public copy with the phone number removed.)
-- [ ] Do I want a MOD Worldwide case study (Fortune 50 accessibility work), or is the timeline entry enough?
+- [ ] Do I want a MOD Worldwide work project (Fortune 50 accessibility work), or is the timeline entry enough?
 - [x] How openly to signal job-hunting: **gently**. Be confident and explicit about who I am and what I bring (like Stephen's site), but don't say "looking for work". The refreshed site and a CV download do that implicitly.
-- [ ] Any shareable visuals for the LiveOps or DPL case studies (sketches, redacted screenshots, before/after flows)?
+- [ ] Any shareable visuals for the LiveOps or DPL work projects (sketches, redacted screenshots, before/after flows)?

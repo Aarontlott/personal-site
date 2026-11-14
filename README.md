@@ -29,7 +29,7 @@ https://www.audible.co.uk/pd/The-Machina-Audiobook/B08QDNMXQZ
 
 https://www.linkedin.com/in/aaron-rierson-lott-594bb776/
 
-## Work Case studies
+## Work projects
 
 Digital Pattern Library, University of St Andrews
 https://www.st-andrews.ac.uk/dpl/1.26.0/index.html

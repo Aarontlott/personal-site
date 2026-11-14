@@ -6,39 +6,35 @@ import { getProjects, isWorkbench } from '../../lib/projects';
 
 const projects = await getProjects();
 
-const caseStudies = projects.filter((p) => p.data.category === 'work');
+const workProjects = projects.filter((p) => p.data.category === 'work');
 const made = projects.filter((p) => p.data.category !== 'work' && !isWorkbench(p));
 const workbench = projects.filter((p) => p.data.category !== 'work' && isWorkbench(p));
 
 const groups = [
   {
-    id: 'case-studies',
-    title: 'Day-job case studies',
-    blurb: 'Work I did for employers: the problem, my part in it, and how it turned out.',
-    items: caseStudies,
+    id: 'work-projects',
+    title: 'Work projects',
+    items: workProjects,
   },
   {
     id: 'made',
     title: 'Things I’ve made',
-    blurb: 'Side projects that made it out the door: generators, games, books and more.',
     items: made,
   },
   {
     id: 'workbench',
     title: 'On the workbench',
-    blurb: 'Unfinished and unpublished. Still worth a look.',
     items: workbench,
   },
 ].filter((g) => g.items.length > 0);
 ---
 
-<Base title="Work" description="Case studies, side projects, generators, games and books by Aaron Rierson-Lott.">
+<Base title="Work" description="Work projects, side projects, generators, games and books by Aaron Rierson-Lott.">
   <section class="section">
     <div class="container">
-      <p class="eyebrow">Work</p>
       <h1>Things I’ve built</h1>
       <p class="lede">
-        Day-job case studies and the side projects I make for fun. Different scales, same habit: watch where
+        Projects from my day jobs and the side projects I make for fun. Different scales, same habit: watch where
         people get stuck, then make the fiddly thing simple.
       </p>
       <nav aria-label="Jump to section" class="jump">
@@ -53,7 +49,6 @@ const groups = [
         <div class="container">
           <div class="section-head">
             <h2 id={`${group.id}-heading`}>{group.title}</h2>
-            <p>{group.blurb}</p>
           </div>
           <div class="grid">
             {group.items.map((project) => (
