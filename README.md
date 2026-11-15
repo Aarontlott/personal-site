@@ -60,7 +60,7 @@ npm run build    # outputs to dist/
 
 | To change…                                   | Edit                                      |
 | -------------------------------------------- | ----------------------------------------- |
-| Intro, stats, skills, experience, links      | `src/data/site.ts`                        |
+| Intro, skills, experience, links             | `src/data/site.ts`                        |
 | A project (or add a new one)                 | `src/content/projects/<slug>.md`          |
 | Colours, fonts, spacing                      | `src/styles/global.css` (`:root` tokens)  |
 | Page layout / sections                       | `src/pages/*.astro`                       |
