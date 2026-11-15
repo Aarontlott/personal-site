@@ -12,12 +12,6 @@ links:
 order: 9
 ---
 
-<!--
-  IMAGES: drop the files into public/images/gwent/ using the filenames below,
-  then remove the <!- - and - -> around each image line (or just delete these notes).
-  Original alt text from the blog post has been kept.
--->
-
 A creative break from the day job, and my first ever print project.
 
 If you played **The Witcher 3**, you probably lost a worrying number of hours to Gwent, the card game inside the game. Lots of people printed their own decks before the official cards came out. My twist: every card would star one of my coworkers, paired with a piece of art that looked like them (or at least captured them).
@@ -28,7 +22,7 @@ If you played **The Witcher 3**, you probably lost a worrying number of hours to
 
 I meant to do a handful. Then I got into the right mood for it and suddenly I was placing an order for **80 cards**: the whole team at my workplace at the time, plus my old workplace back in Scotland.
 
-> It wasn’t really volunteers, to be exact.
+> It wasn’t really volunteers, to be exact. "I'm going to make cards of everyone!" -Me
 
 People supplied their own quotes where they could. For everyone else, I went digging through Goodreads Quotes, which had a great selection.
 

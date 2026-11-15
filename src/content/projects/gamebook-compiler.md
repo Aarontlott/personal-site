@@ -2,7 +2,7 @@
 title: Gamebook Compiler
 summary: A tool that unfolds a branching interactive-fiction story into a choose-your-own-adventure style EPUB, so it reads like a classic gamebook on any e-reader.
 category: tool
-status: in-progress
+status: shelved
 year: TODO
 role: Solo
 stack: [TODO, EPUB]

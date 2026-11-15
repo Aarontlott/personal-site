@@ -1,6 +1,6 @@
 ---
 title: The Bank(s) Can’t Do Documents
-summary: A homelab finance app that turns transaction exports from different banks into one database, then categorises them with mapping rules. About 70% of transactions sort themselves on import. In regular use at home.
+summary: A homelab finance app that maps transaction exports from different banks into a common database, and categorises them with mapping rules. About 70% of transactions sort themselves on import. In regular use at home.
 category: tool
 status: shipped
 year: 2025 – 2026
@@ -17,11 +17,13 @@ Every bank exports transactions differently, and it's a pain to categorise all t
 
 A full-stack web app on my homelab that:
 
-- **Imports exports from several banks** into one common database. Even has a setup wizard to help make it easier to map a new bank!
-- **Categorises with mapping rules.** For example, “SQ \*Zest” becomes *Cafe*. On a good month **70%** of transactions are categorised automatically on import.
-- **Supports a multi-user workflow**, so the wife and I can upload and categorise.
+- **Imports exports from several banks** into one common database. There's a setup wizard to help make it easier to map a new bank!
+- **Categorises with mapping rules.** For example, “SQ \*Zest” becomes *Cafe*. On a good month roughly **70%** of transactions are categorised automatically on import.
+- **Supports a multi-user workflow**, so either the wife or I can upload and categorise the transactions.
 
-It’s built with React-admin and Express, runs in Docker, and deploys with GitHub Actions. I also tried an ASP.NET Core back end as an experiment.
+> Look, I won't say that budgeting is *fun*, but it is a lot easier.
+
+It’s built with React-admin and Express, runs in Docker, and builds with GitHub Actions. I also set it up with an ASP.NET Core back end as an experiment.
 
 ## Why it’s here
 

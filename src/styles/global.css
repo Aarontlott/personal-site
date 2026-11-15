@@ -322,7 +322,8 @@ ol[role='list'] {
   color: var(--navy);
 }
 .badge--in-progress,
-.badge--unfinished {
+.badge--unfinished,
+.badge--shelved {
   background: var(--oxblood);
   color: var(--paper);
 }

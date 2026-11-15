@@ -1,6 +1,6 @@
 ---
 title: Victorian Nautical Archive
-summary: Consult a fussy archival docent and get back the record of a fictional coal-fired steamship from 1880–1917. Every ship is procedurally generated from the name you give it.
+summary: Consult a fussy archival docent and get back the record of a fictional coal-fired steamship from 1880–1910s. Every ship is procedurally generated from the name you give it.
 category: generator
 status: prototype
 year: "2024"
@@ -25,13 +25,15 @@ Made for **PROCJAM 2024**.
 
 You give the archive a ship’s name. The docent goes rummaging through records from the 1880s to the 1910s and comes back with an index card: a coal-fired steamship with a history to match. Cards can be saved as images.
 
-I wanted to make a generator focusing on coal-fired steamships of roughly this era. I’ve always thought they were cool, hence 1880–1917. Limiting the timeframe also simplified the guesswork, because there were fewer year-on-year technological improvements to account for. I ran out of time for proper global ports and shipping, so it covers Europe, the UK, and North and South America.
+I wanted to make a generator focusing on coal-fired steamships of roughly this era. I’ve always thought they were cool, hence 1880–1910s. Limiting the timeframe also simplified the guesswork, because there were fewer year-on-year technological improvements to account for. I ran out of time for proper global ports and shipping, so it covers Europe, the UK, and North and South America.
 
 ## How it works
 
 All ships are generated deterministically and are entirely fictional. Where realistic measurements and estimations exist, I’ve applied them. For the rest, I’ve guessed wildly in the general direction.
 
-There’s no generative AI here. It’s essentially:
+> There’s no generative AI here. 
+
+It is essentially:
 
 - **Seeded RNG**, so the same name always gives the same ship
 - **Dice rolling** for the ship’s stats and fortunes
@@ -63,4 +65,3 @@ The look and the numbers came from engineering magazines of the period, like thi
 
 I hope you enjoy it ❤️
 
-<!-- TODO (optional): what you'd add next, favourite generated ship. -->
