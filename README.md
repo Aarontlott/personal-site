@@ -71,7 +71,7 @@ npm run build    # outputs to dist/
 Copy any file in `src/content/projects/`, rename it (the filename becomes `/work/<filename>/`), and edit the frontmatter:
 
 - `category`: `work` | `game` | `tool` | `generator` | `writing` | `creative`
-- `status`: `shipped` | `prototype` | `in-progress` | `unfinished` (the last two go in "On the workbench")
+- `status`: `shipped` | `prototype` | `in-progress` | `unfinished` | `shelved`. Statuses listed in `workbenchStatuses` go in "On the workbench". To add a new category or status, add it to `categoryLabels` / `statusLabels` in `src/data/site.ts`; that's the only place.
 - `featured: true` puts it on the home page
 - `order`: lower numbers come first
 - `draft: true` hides it
