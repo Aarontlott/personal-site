@@ -1,7 +1,7 @@
 /**
  * ─────────────────────────────────────────────────────────────
  *  SITE DATA — most of the wording on the site lives here.
- *  Edit this file to change your intro, stats, skills,
+ *  Edit this file to change your intro, skills,
  *  experience and links. Projects live in src/content/projects/.
  *  Positioning and proof points: notes/positioning.md
  * ─────────────────────────────────────────────────────────────
@@ -34,14 +34,6 @@ export const site = {
     { key: 'Interests', value: 'Design engineering, design systems, accessibility' },
     { key: 'Location', value: 'Fife, Scotland' },
     { key: 'Status', value: 'Making creative stuff again :D' },
-  ],
-
-  /** "At a glance" numbers. Keep them short and true. */
-  stats: [
-    { value: '12+', label: 'years building for the web' },
-    { value: '5', label: 'Game Jams, I ❤️ PROCJAM' },
-    { value: '2', label: 'published novels (+ audiobook)' },
-    { value: '1', label: 'Pear tree, partridge n/a' },
   ],
 
   /** "What I bring" cards. Numbers here come from notes/positioning.md. */
