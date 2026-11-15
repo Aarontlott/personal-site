@@ -277,16 +277,16 @@ ol[role='list'] {
 }
 .section--band .button:hover {
   color: var(--paper);
-  box-shadow: 4px 4px 0 var(--accent);
+  box-shadow: 4px 4px 0 var(--paper); /* matches the border */
 }
 .section--band .button--primary {
-  color: var(--navy);
-  background: var(--accent);
+  color: var(--accent);
+  background: transparent;
   border-color: var(--accent);
 }
 .section--band .button--primary:hover {
-  color: var(--navy);
-  box-shadow: 4px 4px 0 var(--paper);
+  color: var(--accent);
+  box-shadow: 4px 4px 0 var(--accent); /* matches the border */
 }
 
 /* ─────────────────────────────────────────────────────────────
