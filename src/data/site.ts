@@ -140,7 +140,11 @@ export const nav = [
   { label: 'Contact', href: '/contact/' },
 ];
 
-/** Friendly labels for project categories and statuses. */
+/**
+ * Project categories and statuses.
+ * These lists ARE the allowed values: add a key here and you can use it
+ * in a project's frontmatter (src/content.config.ts reads them).
+ */
 export const categoryLabels = {
   work: 'Work project',
   game: 'Game',
@@ -155,4 +159,8 @@ export const statusLabels = {
   prototype: 'Prototype',
   'in-progress': 'In progress',
   unfinished: 'Unfinished',
+  shelved: 'Shelved',
 } as const;
+
+/** Statuses that put a project in the "On the workbench" sections. */
+export const workbenchStatuses: (keyof typeof statusLabels)[] = ['in-progress', 'unfinished', 'shelved'];

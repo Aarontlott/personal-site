@@ -1,4 +1,5 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
+import { workbenchStatuses } from '../data/site';
 
 export type Project = CollectionEntry<'projects'>;
 
@@ -11,5 +12,4 @@ export async function getProjects() {
   return all.sort(byOrder);
 }
 
-export const isWorkbench = (p: Project) =>
-  p.data.status === 'in-progress' || p.data.status === 'unfinished';
+export const isWorkbench = (p: Project) => workbenchStatuses.includes(p.data.status);

@@ -1,6 +1,11 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
+import { categoryLabels, statusLabels } from './data/site';
+
+/** Turn a labels object's keys into a Zod enum, so site.ts is the single source of truth. */
+const keysOf = <T extends Record<string, string>>(obj: T) =>
+  Object.keys(obj) as [keyof T & string, ...(keyof T & string)[]];
 
 /**
  * Projects: one Markdown file per project in src/content/projects/.
@@ -12,8 +17,10 @@ const projects = defineCollection({
     title: z.string(),
     /** One or two sentences. Shown on cards and at the top of the project page. */
     summary: z.string(),
-    category: z.enum(['work', 'game', 'tool', 'generator', 'writing', 'creative']),
-    status: z.enum(['shipped', 'prototype', 'in-progress', 'unfinished']).default('shipped'),
+    /** Allowed values: the keys of categoryLabels in src/data/site.ts */
+    category: z.enum(keysOf(categoryLabels)),
+    /** Allowed values: the keys of statusLabels in src/data/site.ts */
+    status: z.enum(keysOf(statusLabels)).default('shipped'),
     /** Free text so ranges work: "2024", "2020–2022" */
     year: z.string().optional(),
     role: z.string().optional(),
