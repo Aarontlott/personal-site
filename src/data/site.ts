@@ -124,9 +124,9 @@ export const site = {
   /** External profiles. Order = order shown. */
   links: [
     { label: 'LinkedIn', url: 'https://www.linkedin.com/in/aaron-rierson-lott-594bb776/' },
-    { label: 'GitHub', url: 'https://github.com/Aarontlott' },
     { label: 'Itch.io', url: 'https://haldron.itch.io/' },
     { label: 'Novels', url: 'https://mybook.to/TheMachinaSeries' },
+    { label: 'GitHub', url: 'https://github.com/Aarontlott' },
   ],
 
   /** Optional CV download. Drop a PDF in /public and set the path, e.g. '/aaron-rierson-lott-cv.pdf'. */

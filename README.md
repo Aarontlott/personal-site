@@ -48,7 +48,7 @@ Unfinished wee game in Love2D about moving cargo around, local coop
 
 ## Working on the site
 
-Astro 6, static output, zero client-side JavaScript. Needs Node 22.12+.
+Astro 6, static output. The only client-side JavaScript is the copy-email speech bubble (`src/components/CopyEmail.astro`); everything works without it. Needs Node 22.12+.
 
 ```sh
 npm install

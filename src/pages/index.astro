@@ -40,10 +40,10 @@ const { hero } = site;
       <div class="section-head">
         <h2 id="bring-heading">What I bring</h2>
       </div>
-      <div class="grid grid--2">
+      <div class="grid grid--2 strengths">
         {
           site.strengths.map((s) => (
-            <article class="card strength">
+            <article class="strength">
               <h3>{s.title}</h3>
               <p>{s.body}</p>
               <ul role="list" class="tags">
@@ -76,7 +76,7 @@ const { hero } = site;
     <div class="container">
       <div class="section-head">
         <h2 id="experience-heading">Experience</h2>
-        <a href="/about/">More about how I work →</a>
+        <a href="/about/">More about me →</a>
       </div>
       <Experience />
     </div>
@@ -89,7 +89,7 @@ const { hero } = site;
         <div class="container">
           <div class="section-head">
             <h2 id="workbench-heading">On the workbench</h2>
-            <p>Unfinished, unpublished, and still kind of cool.</p>
+            <a href="/work/#workbench">Workbench projects →</a>
           </div>
           <div class="grid">
             {workbench.map((project) => (
@@ -136,6 +136,11 @@ const { hero } = site;
     margin-bottom: var(--space-l);
   }
 
+  /* No card here: cards mean "clickable" elsewhere on the site.
+     Extra spacing does the separating instead. */
+  .strengths {
+    gap: var(--space-l) var(--space-xl);
+  }
   .strength h3 {
     font-size: var(--step-2);
   }
