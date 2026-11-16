@@ -410,10 +410,11 @@ ol[role='list'] {
   max-width: 24rem;
 }
 /* Several small images under one caption */
+/* Override the width per figure with style="--figure-max: 500px" */
 .prose .figure--stack {
   display: grid;
   gap: var(--space-s);
-  max-width: 32rem;
+  max-width: var(--figure-max, 32rem);
 }
 .prose .figure--output {
   margin-top: 0;
