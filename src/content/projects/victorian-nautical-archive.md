@@ -1,6 +1,6 @@
 ---
 title: Victorian Nautical Archive
-summary: Consult a fussy archival docent and get back the record of a fictional coal-fired steamship from 1880–1910s. Every ship is procedurally generated from the name you give it.
+summary: Consult an archival docent and get a record of a fictional coal-fired steamship from 1880–1910s. Every ship is procedurally generated from the name you give it.
 category: generator
 status: prototype
 year: "2024"
@@ -10,7 +10,7 @@ links:
   - label: Enquire about a ship (Itch.io)
     url: https://haldron.itch.io/victorian-nautical-archive
 featured: true
-order: 4
+order: 3
 ---
 
 <figure class="figure--output">
@@ -41,7 +41,7 @@ It is essentially:
 
 ## Inspiration
 
-The look and the numbers came from engineering magazines of the period, like this May 1902 issue of *Marine Engineering* on the Atlantic Transport Company’s *Minnetonka*. A very special shoutout to the [r/OceanLinerArchitect](https://www.reddit.com/r/OceanLinerArchitect/) subreddit, too.
+The look and the numbers came from engineering magazines of the period, like this May 1902 issue of *Marine Engineering* on the Atlantic Transport Company’s *Minnetonka*. A very special shout-out to the [r/OceanLinerArchitect](https://www.reddit.com/r/OceanLinerArchitect/) subreddit, too.
 
 <figure>
   <img src="/images/vna/minnetonka-illustration.webp" width="1080" height="722" loading="lazy" alt="A period illustration of a large steamship with a single funnel and four masts, ploughing through rough seas past a small sailing boat." />

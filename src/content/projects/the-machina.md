@@ -20,6 +20,16 @@ order: 8
 
 The Machina: Refugees of Darterra, and the Novella Arcology, tell the stories of a race of sentient machines, forced from their home, and their intersection with humanity on Earth.
 
+<figure>
+  <img src="/images/machina/refugees-of-darterra.webp" width="1162" height="610" loading="lazy" alt="The Amazon Kindle listing for The Machina: Refugees of Darterra by Aaron Lott, rated 5.0 stars from 11 ratings. The cover shows a tall armoured robot holding hands with a small child in a red coat on a misty, blue-toned shoreline, under the title 'The Machina: Refugees of Darterra, a novel by Aaron T. Lott'. The blurb opens: 'Science fiction from a machine intelligence view.' and 'The stars have been disappearing from the night sky.' The details show 273 pages, published 29 May 2020." />
+  <figcaption><em>Refugees of Darterra</em>, the novel, published May 2020.</figcaption>
+</figure>
+
+<figure>
+  <img src="/images/machina/arcology.webp" width="1159" height="575" loading="lazy" alt="The Amazon Kindle listing for The Machina: Arcology by Aaron Lott, rated 5.0 stars from 2 ratings. The cover shows a huge, dark, overgrown machine lying in long grass, under the title 'The Machina: Arcology, a novella by Aaron T. Lott'. The blurb reads: 'A delightful novella packed to the brim with action, intrigue, and likeable characters.' It is set during the events of Refugees of Darterra, following another landing site's struggle to survive. The details show 84 pages, published 7 March 2022." />
+  <figcaption><em>Arcology</em>, the novella, set during the events of the first book, published March 2022.</figcaption>
+</figure>
+
 ## Why it’s on a developer’s portfolio
 
 A delightful non-code project. Writing, and finishing, any written work is far harder than getting the first draft onto the page. And the Second draft. The Final_version_4b. 

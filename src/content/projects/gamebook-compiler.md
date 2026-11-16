@@ -1,18 +1,26 @@
 ---
 title: Gamebook Compiler
-summary: A tool that unfolds a branching interactive-fiction story into a choose-your-own-adventure style EPUB, so it reads like a classic gamebook on any e-reader.
+summary: A tool that unfolds a branching interactive-fiction story into a choose-your-own-adventure style EPUB, so it reads like a classic gamebook on an e-reader.
 category: tool
 status: shelved
-year: TODO
+year: "2025"
 role: Solo
-stack: [TODO, EPUB]
+stack: [JavaScript, TypeScript, EPUB]
 order: 20
 ---
 
 ## The idea
 
-Interactive fiction lives in engines and browsers. Gamebooks live on paper: “turn to section 237”. This tool takes a branching story and compiles it into an EPUB of numbered, linked sections, so it works on an e-reader with no runtime at all.
+Interactive fiction typically lives in engines and browsers, with the likes of Twine, ChoiceScript, and a large variety of offshoots and variants. 
+
+Gamebooks live on paper: “turn to page 47”. 
+
+This tool takes a branching story and compiles it into an EPUB of numbered, linked sections, so it works on an e-reader with no runtime.
 
 ## Status
 
-TODO: Where it's at, what's left, what format it reads in (Ink? Twee? your own?).
+Because I'm a TypeScript dev, I naturally setup a way of parsing a nested JSON object of different sections into a branching epub. 
+
+It works on a small scale to create branches and compile into a functional ebook! Huzzah!
+
+
