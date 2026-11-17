@@ -52,6 +52,7 @@
   --rule: #d9ddda;
   --band-bg: var(--space-indigo);
   --band-text: var(--white-smoke);
+  --secondary: #7fd3e3;
 
   /* Type */
   --font-display: 'Arvo', 'Rockwell', 'Roboto Slab', Georgia, serif;
@@ -298,11 +299,11 @@ ol[role='list'] {
   gap: 0.4rem;
 }
 .tag {
-  font-size: 0.8rem;
+  font-size: var(--step--1);
   padding: 0.15em 0.65em;
   border-radius: 999px;
-  background: rgb(0 121 145 / 0.1);
-  color: var(--cerulean);
+  background: var(--secondary);
+  color: var(--space-indigo);
   white-space: nowrap;
 }
 .section--band .tag {
