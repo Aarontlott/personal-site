@@ -10,6 +10,19 @@ import { site } from '../data/site';
     <div class="container about">
       <div>
         <h1>Hi there, <br/> I’m Aaron.</h1>
+        {
+          site.photo.src ? (
+            <img class="about__photo" src={site.photo.src} alt={site.photo.alt} width="800" height="1000" />
+          ) : (
+            import.meta.env.DEV && (
+              <div class="about__photo about__photo--placeholder">
+                Your photo goes here.
+                <br />
+                Set <code>photo.src</code> in src/data/site.ts
+              </div>
+            )
+          )
+        }
       </div>
       <div class="prose">
         <p class="lede">
@@ -82,6 +95,28 @@ import { site } from '../data/site';
     .about {
       grid-template-columns: 1fr 2fr;
     }
+  }
+  .about__photo {
+    display: block;
+    width: 100%;
+    max-width: 18rem;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    margin-top: var(--space-m);
+    border: 2px solid var(--navy);
+    border-radius: var(--radius);
+    box-shadow: 8px 8px 0 var(--accent);
+    /* transform: rotate(-1.5deg); */
+  }
+  .about__photo--placeholder {
+    display: grid;
+    place-content: center;
+    padding: var(--space-m);
+    text-align: center;
+    font-size: var(--step--1);
+    color: var(--text-muted);
+    background: repeating-linear-gradient(45deg, var(--surface) 0 12px, var(--paper) 12px 24px);
+    border-style: dashed;
   }
   .principle__num {
     display: block;

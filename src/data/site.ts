@@ -129,7 +129,12 @@ export const site = {
     { label: 'GitHub', url: 'https://github.com/Aarontlott' },
   ],
 
-  /** Optional CV download. Drop a PDF in /public and set the path, e.g. '/aaron-rierson-lott-cv.pdf'. */
+  /** Photo of me :) */
+  photo: {
+    src: '/images/aaron.webp' as string,
+    alt: 'Aaron smiling, with a short beard and a pink striped T-shirt, in a sunlit stone archway beside a wall of blue and white patterned tiles.',
+  },
+
   cv: 'aaron-rierson-lott-cv.pdf' as string,
 };
 

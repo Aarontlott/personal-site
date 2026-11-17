@@ -30,6 +30,9 @@ const { hero } = site;
       </div>
       <div class="hero__terminal">
         <Terminal />
+        <p class="terminal-note">
+          The old jQuery site got a glow-up, hope you enjoy the new one :)
+        </p>
       </div>
     </div>
   </section>
@@ -129,6 +132,14 @@ const { hero } = site;
   .hero + .section {
     border-top: 1px solid var(--rule);
   }
+  .terminal-note {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    margin: var(--space-m) 0 0 var(--space-m);
+    font-size: var(--step--1);
+    color: var(--text-muted);
+  }
   .hero h1 {
     margin-bottom: var(--space-m);
   }
@@ -136,8 +147,6 @@ const { hero } = site;
     margin-bottom: var(--space-l);
   }
 
-  /* No card here: cards mean "clickable" elsewhere on the site.
-     Extra spacing does the separating instead. */
   .strengths {
     gap: var(--space-l) var(--space-xl);
   }
