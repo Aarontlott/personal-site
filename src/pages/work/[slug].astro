@@ -2,6 +2,7 @@
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import ContactBand from '../../components/ContactBand.astro';
+import ExternalLink from '../../components/ExternalLink.astro';
 import { getProjects, type Project } from '../../lib/projects';
 import { categoryLabels, statusLabels } from '../../data/site';
 
@@ -66,9 +67,9 @@ const facts = [
           links.length > 0 && (
             <div class="actions">
               {links.map((link, i) => (
-                <a class:list={['button', { 'button--primary': i === 0 }]} href={link.url} rel="noopener">
-                  {link.label} ↗&#xFE0E;
-                </a>
+                <ExternalLink class:list={['button', { 'button--primary': i === 0 }]} href={link.url}>
+                  {link.label}
+                </ExternalLink>
               ))}
             </div>
           )

@@ -1,0 +1,35 @@
+---
+/**
+ * "Open in new" icon. Takes the text colour and sits at text size.
+ * The box edges are shortened slightly from the original Material icon so the arrow has more room.
+ * The stroke thickens the original thin outline; raise stroke-width for chunkier, lower for thinner.
+ * Decorative: ExternalLink adds the "(opens in a new tab)" text for screen readers.
+ */
+---
+
+<svg
+  class="icon-open-in-new"
+  viewBox="0 0 24 24"
+  width="1.5em"
+  height="1.5em"
+  fill="currentColor"
+  stroke="currentColor"
+  stroke-width="0.9"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path
+    d="M4.5 21q-.6 0-1.05-.45t-.45-1.05v-15q0-.6 .45-1.05t1.05-.45h5.475v1.5H4.5v15h15v-5.475h1.5v5.475q0 .6-.45 1.05t-1.05 .45H4.5Zm5.05-5.475-1.05-1.075 9.95-9.95H12.975v-1.5h8.025v8.025h-1.5v-5.45L9.55 15.525Z"
+  ></path>
+</svg>
+
+<style>
+  .icon-open-in-new {
+    display: inline-block;
+    flex: none;
+    /* Centre the 1.5em icon on the capital letters of the text beside it:
+       caps sit ~0.35em above the baseline, the icon's centre is 0.75em up. */
+    vertical-align: -0.4em;
+  }
+</style>

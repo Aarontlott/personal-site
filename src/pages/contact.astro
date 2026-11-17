@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import { site } from '../data/site';
+import ExternalLink from '../components/ExternalLink.astro';
 ---
 
 <Base title="Contact" description="Get in touch with Aaron Rierson-Lott.">
@@ -17,9 +18,7 @@ import { site } from '../data/site';
         {
           site.links.map((link) => (
             <li>
-              <a href={link.url} rel="me noopener">
-                {link.label} ↗&#xFE0E;
-              </a>
+              <ExternalLink href={link.url} me>{link.label}</ExternalLink>
             </li>
           ))
         }

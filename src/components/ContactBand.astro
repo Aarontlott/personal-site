@@ -1,5 +1,6 @@
 ---
 import { site } from '../data/site';
+import ExternalLink from './ExternalLink.astro';
 const linkedin = site.links.find((l) => l.label === 'LinkedIn');
 ---
 
@@ -17,7 +18,7 @@ const linkedin = site.links.find((l) => l.label === 'LinkedIn');
     </div>
     <div class="actions">
       <a class="button button--primary" href={`mailto:${site.email}`} data-copy-email>Email me</a>
-      {linkedin && <a class="button" href={linkedin.url} rel="me noopener">LinkedIn</a>}
+      {linkedin && <ExternalLink class="button" href={linkedin.url} me>LinkedIn</ExternalLink>}
       {site.cv && <a class="button" href={site.cv}>Download CV</a>}
     </div>
   </div>
