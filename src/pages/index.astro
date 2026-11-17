@@ -8,8 +8,10 @@ import { site } from '../data/site';
 import { getProjects, isWorkbench } from '../lib/projects';
 
 const projects = await getProjects();
-const featured = projects.filter((p) => p.data.featured);
-const workbench = projects.filter(isWorkbench);
+// `featured: true` picks what shows on the home page. Workbench projects get their own
+// section; the section disappears when nothing on the workbench is featured.
+const featured = projects.filter((p) => p.data.featured && !isWorkbench(p));
+const workbench = projects.filter((p) => p.data.featured && isWorkbench(p));
 const { hero } = site;
 ---
 

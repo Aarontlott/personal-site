@@ -26,7 +26,7 @@ const projects = defineCollection({
     role: z.string().optional(),
     stack: z.array(z.string()).default([]),
     links: z.array(z.object({ label: z.string(), url: z.url() })).default([]),
-    /** Show on the home page "Selected work" grid. */
+    /** Show on the home page: in "Selected work", or "On the workbench" for workbench statuses. */
     featured: z.boolean().default(false),
     /** Lower numbers come first. */
     order: z.number().default(100),
