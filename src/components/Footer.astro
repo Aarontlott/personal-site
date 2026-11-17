@@ -1,5 +1,6 @@
 ---
 import { site } from '../data/site';
+import ExternalLink from './ExternalLink.astro';
 const year = new Date().getFullYear();
 ---
 
@@ -12,9 +13,7 @@ const year = new Date().getFullYear();
       {
         site.links.map((link) => (
           <li>
-            <a href={link.url} rel="me noopener">
-              {link.label}
-            </a>
+            <ExternalLink href={link.url} me>{link.label}</ExternalLink>
           </li>
         ))
       }

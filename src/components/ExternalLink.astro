@@ -1,0 +1,44 @@
+---
+/**
+ * A link to another site: opens in a new tab, with the "open in new" icon
+ * and a hidden "(opens in a new tab)" for screen readers.
+ *
+ *   <ExternalLink href="https://…">Itch.io</ExternalLink>
+ *   <ExternalLink href={url} class="button" me>LinkedIn</ExternalLink>
+ *
+ * `me` marks links to your own profiles (rel="me"), which some sites use to verify you.
+ */
+import type { HTMLAttributes } from 'astro/types';
+import OpenInNew from './icons/OpenInNew.astro';
+
+interface Props extends Omit<HTMLAttributes<'a'>, 'target' | 'rel'> {
+  href: string;
+  /** Link to one of your own profiles */
+  me?: boolean;
+}
+
+const { href, me = false, class: className, 'class:list': classList, ...rest } = Astro.props;
+const rel = ['noopener', 'noreferrer', me && 'me'].filter(Boolean).join(' ');
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel={rel}
+  class:list={['external-link', className, classList]}
+  {...rest}
+><slot /><span class="external-link__icon"><OpenInNew /></span><span class="visually-hidden"> (opens in a new tab)</span></a>
+
+<style>
+  /* Keep the icon with the last word so it never wraps onto a line by itself */
+  .external-link__icon {
+    margin-left: 0.3em;
+    white-space: nowrap;
+  }
+  /* Buttons already space their children with a gap */
+  /* In buttons, let the button's own centring line it up */
+  :global(.button) > .external-link__icon {
+    display: inline-flex;
+    margin-left: 0;
+  }
+</style>
