@@ -35,23 +35,23 @@
    ───────────────────────────────────────────────────────────── */
 :root {
   /* Raw palette */
-  --amber: #ffbe0b;
-  --navy: #222e50;
-  --teal: #007991;
-  --paper: #f2f4f3;
-  --oxblood: #6f1d1b;
+  --amber-gold: #ffbe0b;
+  --space-indigo: #222e50;
+  --cerulean: #007991;
+  --white-smoke: #f2f4f3;
+  --dark-wine: #6f1d1b;
 
   /* Roles — change these, not the raw colours, to restyle */
-  --bg: var(--paper);
+  --bg: var(--white-smoke);
   --surface: #ffffff;
-  --text: var(--navy);
+  --text: var(--space-indigo);
   --text-muted: #4a5574;
-  --link: var(--teal);
-  --accent: var(--amber);
-  --accent-strong: var(--oxblood);
+  --link: var(--cerulean);
+  --accent: var(--amber-gold);
+  --accent-strong: var(--dark-wine);
   --rule: #d9ddda;
-  --band-bg: var(--navy);
-  --band-text: var(--paper);
+  --band-bg: var(--space-indigo);
+  --band-text: var(--white-smoke);
 
   /* Type */
   --font-display: 'Arvo', 'Rockwell', 'Roboto Slab', Georgia, serif;
@@ -154,7 +154,7 @@ ol[role='list'] {
 
 ::selection {
   background: var(--accent);
-  color: var(--navy);
+  color: var(--space-indigo);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -221,7 +221,7 @@ ol[role='list'] {
   left: 1rem;
   top: -4rem;
   background: var(--accent);
-  color: var(--navy);
+  color: var(--space-indigo);
   padding: 0.5rem 1rem;
   border-radius: var(--radius);
   z-index: 10;
@@ -253,31 +253,31 @@ ol[role='list'] {
   gap: 0.5em;
   padding: 0.7em 1.25em;
   border-radius: 999px;
-  border: 2px solid var(--navy);
+  border: 2px solid var(--space-indigo);
   font-weight: 700;
   font-size: var(--step--1);
   letter-spacing: 0.02em;
   text-decoration: none;
-  color: var(--navy);
+  color: var(--space-indigo);
   background: transparent;
   transition: transform 120ms ease, background-color 120ms ease, box-shadow 120ms ease;
 }
 .button:hover {
-  color: var(--navy);
+  color: var(--space-indigo);
   transform: translateY(-2px);
-  box-shadow: 4px 4px 0 var(--navy);
+  box-shadow: 4px 4px 0 var(--space-indigo);
 }
 .button--primary {
   background: var(--accent);
-  border-color: var(--navy);
+  border-color: var(--space-indigo);
 }
 .section--band .button {
-  color: var(--paper);
-  border-color: var(--paper);
+  color: var(--white-smoke);
+  border-color: var(--white-smoke);
 }
 .section--band .button:hover {
-  color: var(--paper);
-  box-shadow: 4px 4px 0 var(--paper); /* matches the border */
+  color: var(--white-smoke);
+  box-shadow: 4px 4px 0 var(--white-smoke); /* matches the border */
 }
 .section--band .button--primary {
   color: var(--accent);
@@ -302,12 +302,12 @@ ol[role='list'] {
   padding: 0.15em 0.65em;
   border-radius: 999px;
   background: rgb(0 121 145 / 0.1);
-  color: var(--teal);
+  color: var(--cerulean);
   white-space: nowrap;
 }
 .section--band .tag {
   background: rgb(242 244 243 / 0.12);
-  color: var(--paper);
+  color: var(--white-smoke);
 }
 
 .badge {
@@ -319,16 +319,16 @@ ol[role='list'] {
   padding: 0.2em 0.6em;
   border-radius: 4px;
   background: var(--accent);
-  color: var(--navy);
+  color: var(--space-indigo);
 }
 .badge--in-progress,
 .badge--unfinished,
 .badge--shelved {
-  background: var(--oxblood);
-  color: var(--paper);
+  background: var(--dark-wine);
+  color: var(--white-smoke);
 }
 .badge--prototype {
-  background: var(--teal);
+  background: var(--cerulean);
   color: #fff;
 }
 
@@ -382,8 +382,8 @@ ol[role='list'] {
   font-size: var(--step--1);
   font-weight: 700;
   letter-spacing: 0.06em;
-  color: var(--teal);
-  border-bottom: 2px solid var(--navy);
+  color: var(--cerulean);
+  border-bottom: 2px solid var(--space-indigo);
 }
 .prose blockquote {
   margin: var(--space-m) 0;
@@ -400,8 +400,8 @@ ol[role='list'] {
 }
 .prose pre {
   font-family: var(--font-mono);
-  background: var(--navy);
-  color: var(--paper);
+  background: var(--space-indigo);
+  color: var(--white-smoke);
   padding: var(--space-s);
   border-radius: var(--radius);
   overflow-x: auto;
@@ -439,7 +439,7 @@ ol[role='list'] {
   margin-top: 0;
 }
 .prose .figure--output img {
-  border: 2px solid var(--navy);
+  border: 2px solid var(--space-indigo);
   box-shadow: 8px 8px 0 var(--accent);
 }
 .prose .figure__label {
@@ -448,7 +448,7 @@ ol[role='list'] {
   padding: 0.2em 0.6em;
   border-radius: 4px;
   background: var(--accent);
-  color: var(--navy);
+  color: var(--space-indigo);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.06em;
