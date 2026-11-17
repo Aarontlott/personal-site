@@ -1,4 +1,14 @@
-# Personal Site. Portfolio.
+# Personal Site
+
+Hello there, I'm Aaron :) thanks for coming to the repo, I hope you find whatever it is you're looking for. 
+
+This was built with Claude, and then the AI-gen edges were painstakingly sanded off and shaped into something more bespoke. Something that I think sounds and looks more like me. 
+
+Thanks for visiting though, please have a look around, and feel free to pop any thoughts over to me via email. 
+
+-Aaron
+
+## Color and font
 
 Color palette: https://coolors.co/ffbe0b-222e50-007991-f2f4f3-6f1d1b
 
@@ -6,7 +16,7 @@ Font: Arvo
 
 ---
 
-## Projects to hightlight
+## Projects to highlight
 
 (Proc gen toy) Victorian Nautical Archive
 https://haldron.itch.io/victorian-nautical-archive
@@ -18,7 +28,6 @@ https://github.com/Aarontlott/Inkling
 https://haldron.itch.io/telepathy
 
 (Creative) Custom Gwent-inspired Cards
-TODO: Find the old website files, extract the post and pictures for a case-study
 https://youtu.be/SZihU6g7ZHM
 
 (Novels & Audiobook) The Machina, and The Machina: Arcology
@@ -42,7 +51,6 @@ Tool for unfolding an Interactive Fiction story into an epub
 
 Cargo Handler game
 Unfinished wee game in Love2D about moving cargo around, local coop
-
 
 ---
 
@@ -76,4 +84,3 @@ Copy any file in `src/content/projects/`, rename it (the filename becomes `/work
 - `order`: lower numbers come first
 - `draft: true` hides it
 
-Search the project for `TODO` to find every placeholder.
