@@ -162,7 +162,7 @@ a:hover {
     top: 4px;
   }
 }
-@media(max-width: 449px) {
+@media(max-width: 514px) {
    .terminal {
     width: 261px;
     min-height: 450px;
