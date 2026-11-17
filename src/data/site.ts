@@ -47,40 +47,20 @@ export const site = {
     {
       title: 'Design & accessibility',
       body:
-        'Accessibility is part of good design, not a checklist. I use the usual accessibility tooling, but I\'ve tested with screen-reader users to deliver truly accessible WCAG AA sites and applications.',
+        'Accessibility is part of good design, not just a checklist. I use the typical accessibility testing tools, but I\'ve tested with screen-reader users to deliver properly accessible WCAG AA sites and applications.',
       tags: ['Design systems', 'WCAG 2.1 AA', 'Screen-reader testing', 'React-admin', 'MUI', 'CSS / SASS'],
     },
     {
       title: 'Shipping small and often',
       body:
-        'Smaller merge requests, good Continuous Integration (CI/CD), and AI-assisted engineering. At Outplay, the team’s p90 time to merge halved, from 1.86 to 0.9 days.',
+        'Smaller merge requests, good Continuous Integration (CI/CD) hygiene, and AI-assisted engineering. At Outplay, the team’s p90 time to merge halved, from 1.86 to 0.9 days.',
       tags: ['Claude Code', 'Cursor', 'GitLab / GitHub CI/CD', 'Playwright', 'Vite', 'Node.js'],
     },
     {
       title: 'Making things from scratch',
       body:
         'I enjoy turning a vague idea into something people can play with: procedural text, game-jams, two novels.',
-      tags: ['Procedural generation', 'Game jams', 'WebSockets', 'Unity', 'Writing'],
-    },
-  ],
-
-  /** How you work — short principles, shown on the About page. */
-  principles: [
-    {
-      title: 'Sit with the people who use it',
-      body: 'Watch where they actually get stuck. The best fixes are usually boring, specific, and a huge relief.',
-    },
-    {
-      title: 'Simple beats clever',
-      body: 'The best system is the one the next person can understand on a Monday morning.',
-    },
-    {
-      title: 'Accessibility is good design',
-      body: 'WCAG AA is part of “done”, tested with real assistive tech, not a ticket for later.',
-    },
-    {
-      title: 'Ship small and often',
-      body: 'Small merge requests, quick feedback, and a working thing in front of people beats a perfect plan in a doc.',
+      tags: ['Procedural generation', 'Game jams', 'WebSockets', 'Writing'],
     },
   ],
 
