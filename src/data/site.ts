@@ -113,7 +113,7 @@ export const site = {
     alt: 'Aaron smiling, with a short beard and a pink striped T-shirt, in a sunlit stone archway beside a wall of blue and white patterned tiles.',
   },
 
-  cv: 'aaron-rierson-lott-cv.pdf' as string,
+  cv: '/aaron-rierson-lott-cv.pdf' as string,
 };
 
 /** Main navigation. */
