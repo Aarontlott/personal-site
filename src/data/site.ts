@@ -3,7 +3,6 @@
  *  SITE DATA — most of the wording on the site lives here.
  *  Edit this file to change your intro, skills,
  *  experience and links. Projects live in src/content/projects/.
- *  Positioning and proof points: notes/positioning.md
  * ─────────────────────────────────────────────────────────────
  */
 
@@ -36,7 +35,6 @@ export const site = {
     { key: 'Status', value: 'Making creative stuff again :D' },
   ],
 
-  /** "What I bring" cards. Numbers here come from notes/positioning.md. */
   strengths: [
     {
       title: 'Person-centred coding',

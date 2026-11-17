@@ -3,7 +3,6 @@ import { defineConfig } from 'astro/config';
 
 // https://docs.astro.build/en/reference/configuration-reference/
 export default defineConfig({
-  // TODO: confirm the live domain — used for canonical URLs and social tags.
   site: 'https://aaronlott.com',
   // Static output, zero client-side JavaScript. Keep it that way unless a page truly needs it.
   output: 'static',
