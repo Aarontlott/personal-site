@@ -70,4 +70,10 @@ const isActive = (href: string) => path === href || path.startsWith(href);
   .site-nav a[aria-current='page'] {
     border-bottom-color: var(--accent);
   }
+
+  @media(max-width: 514px) {
+     .site-header__inner {
+      gap: 1.5rem;
+    }
+  }
 </style>
