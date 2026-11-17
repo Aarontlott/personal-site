@@ -9,7 +9,7 @@ import { site } from '../data/site';
         <p class="timeline__dates">{job.dates}</p>
         <div>
           <h3 class="timeline__role">
-            {job.role} <span class="timeline__org">· {job.org}</span>
+            {job.role} <span class="timeline__org"><span class="timeline__sep" aria-hidden="true">· </span>{job.org}</span>
           </h3>
           <p class="muted">{job.summary}</p>
           {job.link && (
@@ -68,9 +68,19 @@ import { site } from '../data/site';
     font-weight: 700;
     font-size: var(--step--1);
   }
-  @media (max-width: 40rem) {
+  .timeline h3 {
+    line-height: 1.4;
+  }
+  @media (--sm-down) {
     .timeline__item {
       grid-template-columns: 1fr;
+    }
+    /* Organisation on its own line, without the dot */
+    .timeline__org {
+      display: block;
+    }
+    .timeline__sep {
+      display: none;
     }
   }
 </style>

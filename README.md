@@ -71,6 +71,7 @@ npm run build    # outputs to dist/
 | Intro, skills, experience, links             | `src/data/site.ts`                        |
 | A project (or add a new one)                 | `src/content/projects/<slug>.md`          |
 | Colours, fonts, spacing                      | `src/styles/global.css` (`:root` tokens)  |
+| Breakpoints (screen sizes)                   | `src/styles/breakpoints.css`              |
 | Page layout / sections                       | `src/pages/*.astro`                       |
 | The whoami terminal                          | `whoami` in `src/data/site.ts`            |
 
