@@ -1,0 +1,76 @@
+---
+import { site } from '../data/site';
+---
+
+<ol role="list" class="timeline">
+  {
+    site.experience.map((job) => (
+      <li class="timeline__item">
+        <p class="timeline__dates">{job.dates}</p>
+        <div>
+          <h3 class="timeline__role">
+            {job.role} <span class="timeline__org">· {job.org}</span>
+          </h3>
+          <p class="muted">{job.summary}</p>
+          {job.link && (
+            <p class="timeline__link">
+              <a href={job.link}>Read more →</a>
+            </p>
+          )}
+        </div>
+      </li>
+    ))
+  }
+</ol>
+
+<style>
+  .timeline {
+    display: grid;
+    gap: var(--space-m);
+    border-left: 3px solid var(--accent);
+    padding-left: var(--space-m);
+  }
+  .timeline__item {
+    position: relative;
+    display: grid;
+    gap: 0 var(--space-m);
+    grid-template-columns: minmax(8rem, 11rem) 1fr;
+  }
+  .timeline__item::before {
+    content: '';
+    position: absolute;
+    left: calc(-1 * var(--space-m) - 9px);
+    top: 0.45em;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--space-indigo);
+    border: 3px solid var(--bg);
+  }
+  .timeline__dates {
+    font-size: var(--step--1);
+    font-weight: 700;
+    color: var(--cerulean);
+    margin: 0.2em 0 0;
+  }
+  .timeline__role {
+    margin-bottom: 0.25rem;
+  }
+  .timeline__org {
+    font-weight: 400;
+    color: var(--text-muted);
+  }
+  .timeline p {
+    margin-bottom: 0;
+  }
+  .timeline__link {
+    margin-top: 0.35rem;
+    font-weight: 700;
+    font-size: var(--step--1);
+  }
+  @media (max-width: 40rem) {
+    .timeline__item {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

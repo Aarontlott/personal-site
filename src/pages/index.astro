@@ -1,0 +1,158 @@
+---
+import Base from '../layouts/Base.astro';
+import Terminal from '../components/Terminal.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import Experience from '../components/Experience.astro';
+import ContactBand from '../components/ContactBand.astro';
+import { site } from '../data/site';
+import { getProjects, isWorkbench } from '../lib/projects';
+
+const projects = await getProjects();
+// `featured: true` picks what shows on the home page. Workbench projects get their own
+// section; the section disappears when nothing on the workbench is featured.
+const featured = projects.filter((p) => p.data.featured && !isWorkbench(p));
+const workbench = projects.filter((p) => p.data.featured && isWorkbench(p));
+const { hero } = site;
+---
+
+<Base>
+  {/* ── Hero ─────────────────────────────────────────── */}
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <h1>
+          {hero.headlineStart} {hero.highlight} {hero.headlineEnd}
+        </h1>
+        <p class="lede">{hero.intro}</p>
+        <div class="actions">
+          <a class="button button--primary" href="/work/">See my work</a>
+          <a class="button" href="/contact/">Get in touch</a>
+          {site.cv && <a class="button" href={site.cv}>Download CV</a>}
+        </div>
+      </div>
+      <div class="hero__terminal">
+        <Terminal />
+        <p class="terminal-note">
+          The old jQuery site got a glow-up, hope you enjoy the new one :)
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* ── What I bring ─────────────────────────────────── */}
+  <section class="section" aria-labelledby="bring-heading">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="bring-heading">What I bring</h2>
+      </div>
+      <div class="grid grid--2 strengths">
+        {
+          site.strengths.map((s) => (
+            <article class="strength">
+              <h3>{s.title}</h3>
+              <p>{s.body}</p>
+              <ul role="list" class="tags">
+                {s.tags.map((t) => (
+                  <li class="tag">{t}</li>
+                ))}
+              </ul>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  {/* ── Selected work ────────────────────────────────── */}
+  <section class="section" aria-labelledby="work-heading">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="work-heading">Selected work</h2>
+        <a href="/work/">All projects →</a>
+      </div>
+      <div class="grid grid--2">
+        {featured.map((project) => <ProjectCard project={project} />)}
+      </div>
+    </div>
+  </section>
+
+  {/* ── Experience ───────────────────────────────────── */}
+  <section class="section" aria-labelledby="experience-heading">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="experience-heading">Experience</h2>
+        <a href="/about/">More about me →</a>
+      </div>
+      <Experience />
+    </div>
+  </section>
+
+  {/* ── On the workbench ─────────────────────────────── */}
+  {
+    workbench.length > 0 && (
+      <section class="section" aria-labelledby="workbench-heading">
+        <div class="container">
+          <div class="section-head">
+            <h2 id="workbench-heading">On the workbench</h2>
+            <a href="/work/#workbench">Workbench projects →</a>
+          </div>
+          <div class="grid">
+            {workbench.map((project) => (
+              <ProjectCard project={project} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <ContactBand />
+</Base>
+
+<style>
+  .hero {
+    padding-block: var(--space-xl);
+    overflow: hidden;
+  }
+  .hero__inner {
+    display: grid;
+    gap: var(--space-l);
+    align-items: center;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 60rem) {
+    .hero__inner {
+      grid-template-columns: 1fr 1.1fr;
+    }
+    /* Let the terminal spill past the right edge of the content area,
+       into the page margin: up to 10rem, always leaving 2rem of breathing room. */
+    .hero__terminal {
+      --bleed: min(10rem, max(0px, (100vw - var(--container)) / 2 - 2rem));
+      margin-right: calc(-1 * var(--bleed));
+    }
+  }
+  .hero + .section {
+    border-top: 1px solid var(--rule);
+  }
+  .terminal-note {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    margin: var(--space-m) 0 0 var(--space-m);
+    font-size: var(--step--1);
+    color: var(--text-muted);
+  }
+  .hero h1 {
+    margin-bottom: var(--space-m);
+  }
+  .hero .lede {
+    margin-bottom: var(--space-l);
+  }
+
+  .strengths {
+    gap: var(--space-l) var(--space-xl);
+  }
+  .strength h3 {
+    font-size: var(--step-2);
+  }
+</style>

@@ -1,0 +1,60 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+---
+
+<Base title="Contact" description="Get in touch with Aaron Rierson-Lott.">
+  <section class="section">
+    <div class="container contact">
+      <h1>Say hello</h1>
+      <p class="lede">
+        The quickest way to reach me is email. I’m on LinkedIn, and my side projects live on GitHub and Itch.io.
+      </p>
+
+      <a class="email" href={`mailto:${site.email}`} data-copy-email title="Copy email address">{site.email}</a>
+
+      <ul role="list" class="elsewhere">
+        {
+          site.links.map((link) => (
+            <li>
+              <a href={link.url} rel="me noopener">
+                {link.label} ↗
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+
+      {site.cv && <p><a class="button" href={"/"+site.cv}>Download my CV</a></p>}
+    </div>
+  </section>
+</Base>
+
+<style>
+  .contact {
+    max-width: 48rem;
+  }
+  .email {
+    display: inline-block;
+    margin-block: var(--space-m) var(--space-l);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--step-2);
+    color: var(--space-indigo);
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 0.18em;
+    text-underline-offset: 0.2em;
+    word-break: break-word;
+  }
+  .email:hover {
+    color: var(--accent-strong);
+  }
+  .elsewhere {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s) var(--space-l);
+    font-weight: 700;
+    margin-bottom: var(--space-l);
+  }
+</style>

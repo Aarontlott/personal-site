@@ -1,0 +1,141 @@
+---
+import Base from '../layouts/Base.astro';
+import Experience from '../components/Experience.astro';
+import ContactBand from '../components/ContactBand.astro';
+import { site } from '../data/site';
+---
+
+<Base title="About" description="About Aaron Rierson-Lott: experience, how I work, and what I do outside the day job.">
+  <section class="section">
+    <div class="container about">
+      <div>
+        <h1>Hi there, <br/> I’m Aaron.</h1>
+        {
+          site.photo.src ? (
+            <img class="about__photo" src={site.photo.src} alt={site.photo.alt} width="800" height="1000" />
+          ) : (
+            import.meta.env.DEV && (
+              <div class="about__photo about__photo--placeholder">
+                Your photo goes here.
+                <br />
+                Set <code>photo.src</code> in src/data/site.ts
+              </div>
+            )
+          )
+        }
+      </div>
+      <div class="prose">
+        <p class="lede">
+          I’m a {site.role.toLowerCase()} in {site.location} with 12 years’ experience, and I work where design
+          and engineering meet.
+        </p>
+        <p>
+          My favourite part of the job is sitting with the people who use my tools and fixing where they actually
+          get stuck. At Outplay Entertainment I’m the sole front-end engineer on the LiveOps platform, the tool
+          every producer, designer and QA tester uses to run the studio’s live games. I rebuilt it from Ember.js to
+          React-admin without ever switching it off, and shaped it around six groups of people who all want
+          slightly different things from it.
+        </p>
+        <p>
+          Before that I led a web department at MOD Worldwide, delivering accessible work for Fortune 50 healthcare and
+          telecom clients, and was lead developer on the University of St Andrews’ Digital Pattern Library. I treat
+          WCAG AA as part of good design rather than a checklist, and I like to ship small and often.
+        </p>
+        <p>
+          Outside work I make things for the fun of it: game-jams but with a soft spot for the PROCJAM, a homelab
+          finance app (less fun, but the wife loves it), and The Machina, a series of novels that also became an audiobook.
+        </p>
+        <p>I enjoy creating things for people and, hopefully, making the world a brighter place.</p>
+        {site.cv && <p><a class="button button--primary" href={site.cv}>Download my CV</a></p>}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="experience-heading">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="experience-heading">Experience</h2>
+      </div>
+      <Experience />
+      <p class="education"><strong>Education:</strong> {site.education}</p>
+      <p class="side-projects-link"><a href="/work/#made">See some of my non-work projects →</a></p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="skills-heading">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="skills-heading">Toolbox</h2>
+      </div>
+      <div class="grid grid--2">
+        {
+          site.strengths.map((s) => (
+            <div>
+              <h3>{s.title}</h3>
+              <ul role="list" class="tags">
+                {s.tags.map((t) => (
+                  <li class="tag">{t}</li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <ContactBand />
+</Base>
+
+<style>
+  .about {
+    display: grid;
+    gap: var(--space-m) var(--space-xl);
+  }
+  @media (min-width: 56rem) {
+    .about {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+  .about__photo {
+    display: block;
+    width: 100%;
+    max-width: 18rem;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    margin-top: var(--space-m);
+    border: 2px solid var(--space-indigo);
+    border-radius: var(--radius);
+    box-shadow: 8px 8px 0 var(--accent);
+    /* transform: rotate(-1.5deg); */
+  }
+  .about__photo--placeholder {
+    display: grid;
+    place-content: center;
+    padding: var(--space-m);
+    text-align: center;
+    font-size: var(--step--1);
+    color: var(--text-muted);
+    background: repeating-linear-gradient(45deg, var(--surface) 0 12px, var(--white-smoke) 12px 24px);
+    border-style: dashed;
+  }
+  .principle__num {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--step-2);
+    color: var(--accent-strong);
+    margin-bottom: var(--space-xs);
+  }
+  .education {
+    margin-top: var(--space-l);
+  }
+  .side-projects-link {
+    margin-top: var(--space-s);
+    font-weight: 700;
+  }
+  .principle p {
+    margin: 0;
+    color: var(--text-muted);
+  }
+</style>

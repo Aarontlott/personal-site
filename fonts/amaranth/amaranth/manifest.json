@@ -1,0 +1,25 @@
+{
+  "name": "Amaranth",
+  "family": "Amaranth",
+  "description": "The Amaranth family is a friendly upright italic design with a slight contrast and distinctive curves. With its three new styles Amaranth is healthy for all your texts too!",
+  "author": "Gesine Todt",
+  "website": "https://github.com/googlefonts/amaranth",
+  "category": "Sans Serif",
+  "tags": [
+    "sans-serif",
+    "google"
+  ],
+  "languages": [
+    "en"
+  ],
+  "styles": [
+    "Bold",
+    "Bold Italic",
+    "Italic",
+    "Regular"
+  ],
+  "formats": [
+    "ttf"
+  ],
+  "license": "SIL Open Font License 1.1"
+}

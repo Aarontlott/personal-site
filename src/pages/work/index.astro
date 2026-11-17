@@ -1,0 +1,73 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import ContactBand from '../../components/ContactBand.astro';
+import { getProjects, isWorkbench } from '../../lib/projects';
+
+const projects = await getProjects();
+
+const workProjects = projects.filter((p) => p.data.category === 'work');
+const made = projects.filter((p) => p.data.category !== 'work' && !isWorkbench(p));
+const workbench = projects.filter((p) => p.data.category !== 'work' && isWorkbench(p));
+
+const groups = [
+  {
+    id: 'work-projects',
+    title: 'Work projects',
+    items: workProjects,
+  },
+  {
+    id: 'made',
+    title: 'Things I’ve made',
+    items: made,
+  },
+  {
+    id: 'workbench',
+    title: 'On the workbench',
+    items: workbench,
+  },
+].filter((g) => g.items.length > 0);
+---
+
+<Base title="Work" description="Work projects, side projects, generators, games and books by Aaron Rierson-Lott.">
+  <section class="section">
+    <div class="container">
+      <h1>Things I’ve built</h1>
+      <p class="lede">
+        Day job projects and the stuff I make for fun.
+      </p>
+      <nav aria-label="Jump to section" class="jump">
+        {groups.map((g) => <a href={`#${g.id}`}>{g.title}</a>)}
+      </nav>
+    </div>
+  </section>
+
+  {
+    groups.map((group) => (
+      <section class="section" id={group.id} aria-labelledby={`${group.id}-heading`}>
+        <div class="container">
+          <div class="section-head">
+            <h2 id={`${group.id}-heading`}>{group.title}</h2>
+          </div>
+          <div class="grid">
+            {group.items.map((project) => (
+              <ProjectCard project={project} />
+            ))}
+          </div>
+        </div>
+      </section>
+    ))
+  }
+
+  <ContactBand />
+</Base>
+
+<style>
+  .jump {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s) var(--space-m);
+    margin-top: var(--space-m);
+    font-weight: 700;
+  }
+</style>
