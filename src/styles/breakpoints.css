@@ -1,0 +1,15 @@
+/* ─────────────────────────────────────────────────────────────
+   BREAKPOINTS — the single source of truth.
+
+   Use them in any CSS file or Astro <style> block:
+     @media (--sm-down) { … }
+     @media (--md-up) and (prefers-reduced-motion: no-preference) { … }
+
+   This file is never loaded by the browser: postcss.config.mjs reads it
+   at build time and swaps each (--name) for its real media query.
+   Restart `npm run dev` after editing it.
+   ───────────────────────────────────────────────────────────── */
+
+@custom-media --xs-down (max-width: 32rem); /* ≤ 512px: small phones */
+@custom-media --sm-down (max-width: 40rem); /* ≤ 640px: phones */
+@custom-media --md-up   (min-width: 60rem); /* ≥ 960px: two-column layouts */
