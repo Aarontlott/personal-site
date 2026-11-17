@@ -83,4 +83,32 @@ import { site } from '../data/site';
   @keyframes blink {
     50% { opacity: 0; }
   }
+
+  /* ── Mobile: a smaller terminal ─────────────────────── */
+  @media (max-width: 600px) {
+    .terminal {
+      font-size: 0.875rem;
+      line-height: 1.5;
+      box-shadow: 8px 8px 0 var(--accent);
+    }
+    .terminal__bar {
+      gap: 0.3rem;
+      padding: 0.4rem 0.75rem;
+    }
+    .terminal__dot {
+      width: 0.55rem;
+      height: 0.55rem;
+    }
+    .terminal__title {
+      font-size: 0.75rem;
+    }
+    .terminal__body {
+      padding: 0.75rem 0.8rem 0.9rem;
+    }
+    /* Let long values wrap under their label instead of squeezing */
+    /* .terminal dl > div {
+      flex-wrap: wrap;
+      column-gap: 0.5ch;
+    } */
+  }
 </style>
