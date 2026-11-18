@@ -118,6 +118,7 @@ export const site = {
 
 /** Main navigation. */
 export const nav = [
+  { label: 'Home', href: '/' },
   { label: 'Work', href: '/work/' },
   { label: 'About', href: '/about/' },
   { label: 'Contact', href: '/contact/' },

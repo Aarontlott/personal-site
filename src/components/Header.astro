@@ -2,7 +2,9 @@
 import { nav } from '../data/site';
 
 const path = Astro.url.pathname;
-const isActive = (href: string) => path === href || path.startsWith(href);
+// Home ("/") only matches the home page itself; every path starts with "/".
+// Other items also match their sub-pages, e.g. Work for /work/inkling/.
+const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
 ---
 
 <header class="site-header">
