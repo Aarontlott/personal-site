@@ -31,6 +31,9 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
 
 <style>
   .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 5; /* above page content; below the skip link and copy bubble */
     border-bottom: 1px solid var(--rule);
     background: var(--bg);
   }
